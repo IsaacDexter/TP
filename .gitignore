@@ -72,9 +72,10 @@ crashlytics-build.properties
 /[Aa]ssets/[Ss]treamingAssets/aa/*
 
 
-
+TP/Library
 TP/Library/Artifacts
 TP/Library/ArtifactDB
 *.bin
 *.log
 TP/obj/Debug/
+TP/Library/Bee/artifacts
