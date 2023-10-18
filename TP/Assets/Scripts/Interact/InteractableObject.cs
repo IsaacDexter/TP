@@ -3,8 +3,11 @@ using System.Collections.Generic;
 using UnityEngine;
 
 
-public interface InteractableObject
+public class InteractableObject : MonoBehaviour
 {
-    public string InteractionPrompt { get; }
-    public bool Interact(Interact interact);
+    public string InteractionPrompt;
+    virtual public bool Interact(Interact interact)
+    {
+        return false;
+    }
 }

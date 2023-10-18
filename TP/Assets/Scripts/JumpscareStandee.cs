@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -5,7 +6,6 @@ using UnityEngine;
 public class JumpscareStandee : MonoBehaviour
 {
     [SerializeField, Range(0.0f, 1.0f), Tooltip("The amount of poop to increase the scaree by.")] private float poopIncrease = 0.0f;
-    [SerializeField, Tooltip("Whether the scare has already been triggered")] private bool triggered = false;
     // Start is called before the first frame update
     void Start()
     {
@@ -26,5 +26,6 @@ public class JumpscareStandee : MonoBehaviour
             Player player = other.GetComponentInParent<Player>();
             player.Scare(poopIncrease);
         }
+        GetComponent<Collider>().enabled = false;
     }
 }

@@ -9,45 +9,60 @@ using UnityEngine.UIElements;
 public class PlayerUIManager : MonoBehaviour
 {
     [SerializeField, Tooltip("List for the scared faces")] private List<Sprite> poopFaces;
-    [Tooltip("Currently Selected Face")] public Sprite currentFace;
-    private const float scareDuration = 1.8f;
-    private const float messageDuration = 2.5f;
+    [SerializeField] private UnityEngine.UI.Image poopFace;
     [SerializeField] private UnityEngine.UI.Image scaredFace;
+
+    private const float scareDuration = 1.8f;
+    private const float fadeDuration = 0.18f;
+
     [SerializeField] private TextMeshProUGUI messenger;
     // Start is called before the first frame update
     void Start()
     {
-        currentFace = poopFaces[0];
+        poopFace.sprite = poopFaces[0];
+        scaredFace.color = Color.black;
     }
 
-    public void Message(string message, float duration = messageDuration)
+    public void DisplayMessage(string message)
     {
-        CancelInvoke("RemoveMessage");
         messenger.SetText(message);
-        Invoke("RemoveMessage", duration);
     }
-
-    private void RemoveMessage()
+    public void DisplayMessage(string message, float duration)
+    {
+        CancelInvoke("ClearMessage");
+        messenger.SetText(message);
+        Invoke("ClearMessage", duration);
+    }
+    public void ClearMessage()
     {
         messenger.SetText("");
     }
-
-    public void Scare(float duration = scareDuration)
+    public void ClearMessage(string message)
     {
-        CancelInvoke("Unscare");
-        scaredFace.enabled = true;  //enable the usually disabled scared face sprite over the top of the scared faces
-        Invoke("Unscare", duration);   //Invoke its hiding after the set duration
+        if (messenger.GetParsedText() == message)
+        {
+            messenger.SetText("");
+        }
     }
 
-    void Unscare()
+    public void ShowScaredFace(float duration = scareDuration)
     {
-        scaredFace.enabled = false;
+        Debug.Log("Showed Scared face");
+        CancelInvoke("HideScaredFace");
+        scaredFace.CrossFadeColor(Color.white, fadeDuration, false, true);
+        Invoke("HideScaredFace", duration);   //Invoke its hiding after the set duration
+    }
+
+    void HideScaredFace()
+    {
+        Debug.Log("Hid Scared face");
+        scaredFace.CrossFadeColor(Color.clear, fadeDuration, false, true);
     }
 
     public void UpdateFace(float poop)
     {
         poop *= poopFaces.Count;    //Multiply the current poop level by the number of faces to find how far through the face should be
         int index = Math.Clamp((int)Math.Truncate(poop), 0, poopFaces.Count - 1);   //Find the index from that poop level by truncating, clamping it within the size incase poop is FULL
-        currentFace = poopFaces[index]; //Set the face to the appropriate poop level
+        poopFace.sprite = poopFaces[index]; //Set the face to the appropriate poop level
     }
 }
