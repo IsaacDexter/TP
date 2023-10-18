@@ -31,6 +31,11 @@ public class PlayerStatManager : MonoBehaviour
         this.poop = Mathf.Clamp01(poop - amount);
     }
 
+    public float GetPoop()
+    {
+        return poop;
+    }
+
     // Start is called before the first frame update
     void Start()
     {

@@ -5,6 +5,7 @@ using UnityEngine;
 public class Player : MonoBehaviour
 {
     public PlayerStatManager stats;
+    public PlayerUIManager ui;
     // Start is called before the first frame update
 
     /// <summary>Scare the player, increasing the poop stat and updating the HUD</summary>
@@ -12,7 +13,10 @@ public class Player : MonoBehaviour
     public void Scare(float amount)
     {
         stats.IncreasePoop(amount);
+        ui.UpdateFace(stats.GetPoop());
+        ui.ShowScaredFace();
     }
+
     void Start()
     {
 

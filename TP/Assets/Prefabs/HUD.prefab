@@ -215,7 +215,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 0c55959dc7da44842a26bf1c15b62e32, type: 3}
+  m_Sprite: {fileID: 0}
   m_Type: 0
   m_PreserveAspect: 1
   m_FillCenter: 1
@@ -276,7 +276,7 @@ MonoBehaviour:
   - {fileID: 21300000, guid: 250ae65c663bb824bb1034832b8ab5f4, type: 3}
   - {fileID: 21300000, guid: 01f03772adcb045449c6d99684752883, type: 3}
   - {fileID: 21300000, guid: f0a58fd448757be4f9f7a020380f9bb5, type: 3}
-  currentFace: {fileID: 21300000, guid: 0c55959dc7da44842a26bf1c15b62e32, type: 3}
+  poopFace: {fileID: 3568695671068042375}
   scaredFace: {fileID: 3618475714489643824}
   messenger: {fileID: 1338034105112562679}
 --- !u!1 &6456222140868451925
