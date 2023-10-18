@@ -92,7 +92,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1362204462904430253
 RectTransform:
   m_ObjectHideFlags: 0
@@ -277,7 +277,6 @@ MonoBehaviour:
   - {fileID: 21300000, guid: 01f03772adcb045449c6d99684752883, type: 3}
   - {fileID: 21300000, guid: f0a58fd448757be4f9f7a020380f9bb5, type: 3}
   currentFace: {fileID: 21300000, guid: 0c55959dc7da44842a26bf1c15b62e32, type: 3}
-  scareDuration: 1.17
   scaredFace: {fileID: 3618475714489643824}
   messenger: {fileID: 1338034105112562679}
 --- !u!1 &6456222140868451925
