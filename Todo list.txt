@@ -1,0 +1,11 @@
+- Make house
+	- Repeating entrance room
+	- Hallway for enemy chasing so we dont have to do pathfinding
+- Bathroom 
+	- souls bonfire
+		- colon vol, intestine length, sphincter diameter
+- Player poop meter
+- Scene template
+- Billboard jumpscare
+- Billboard chasing enemy
+- Button mash for 100% poop
