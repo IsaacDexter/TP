@@ -29,10 +29,4 @@ public class Interact : MonoBehaviour
         }
          
     }
-
-    private void OnDrawGizmos()
-    {
-        Gizmos.color = Color.red;
-        Gizmos.DrawWireSphere(interaction.position, interactionRadius);
-    }
 }

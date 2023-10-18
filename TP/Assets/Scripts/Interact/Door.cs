@@ -16,10 +16,12 @@ public class Door : MonoBehaviour, InteractableObject
 
     public bool Interact(Interact interact)
     {
-        Debug.Log("Open door");
+        Debug.Log("Open door"); //add ui text for this
 
         player.transform.position = teleportLocation.transform.position;
-                
+        
+        //add transition + sfx :)
+        
         return true;
     }
 }
