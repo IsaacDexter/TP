@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class PlayerStats : MonoBehaviour
+public class PlayerStatManager : MonoBehaviour
 {
     [Header("Comedy")]
     [SerializeField, Tooltip("Diameter of the sphincter, in cm")] private float sphincterDiameter = 0.25f;
@@ -19,14 +19,14 @@ public class PlayerStats : MonoBehaviour
 
     /// <summary>Increase the players poop, to a maximum of 1</summary>
     /// <param name="amount">The amount to increase poop by</param>
-    public void AddPoop(float amount)
+    public void IncreasePoop(float amount)
     {
         this.poop = Mathf.Clamp01(poop + amount);
     }
 
     /// <summary>Reduces the players poop, to a minimum of 0</summary>
     /// <param name="amount">The amount to reduce poop by</param>
-    public void RemovePoop(float amount)
+    public void DecreasePoop(float amount)
     {
         this.poop = Mathf.Clamp01(poop - amount);
     }
@@ -34,7 +34,6 @@ public class PlayerStats : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        
     }
 
     // Update is called once per frame
