@@ -62,7 +62,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 10303, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: a20efc2a7c839e84e98d275d10fd7c70, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -249,7 +249,6 @@ Transform:
   - {fileID: 1142039509899837513}
   - {fileID: 2520865711497776858}
   - {fileID: 4907163536651049799}
-  - {fileID: 6780508405409748356}
   - {fileID: 7256816634505054372}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -309,6 +308,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -7511558181221131132, guid: 8891b5cb7b9b4ba46aab9b53dba74796, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 43bd5c11b65627b4cb651ecd513574f6, type: 2}
     - target: {fileID: 919132149155446097, guid: 8891b5cb7b9b4ba46aab9b53dba74796, type: 3}
       propertyPath: m_Name
       value: wall_half (4)
@@ -379,6 +382,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -7511558181221131132, guid: 8891b5cb7b9b4ba46aab9b53dba74796, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 43bd5c11b65627b4cb651ecd513574f6, type: 2}
     - target: {fileID: 919132149155446097, guid: 8891b5cb7b9b4ba46aab9b53dba74796, type: 3}
       propertyPath: m_Name
       value: wall_half (3)
@@ -449,6 +456,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -7511558181221131132, guid: 8891b5cb7b9b4ba46aab9b53dba74796, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 43bd5c11b65627b4cb651ecd513574f6, type: 2}
     - target: {fileID: 919132149155446097, guid: 8891b5cb7b9b4ba46aab9b53dba74796, type: 3}
       propertyPath: m_Name
       value: wall_half (2)
@@ -462,72 +473,6 @@ PrefabInstance:
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 8891b5cb7b9b4ba46aab9b53dba74796, type: 3}
   m_PrefabInstance: {fileID: 4359087701079215530}
-  m_PrefabAsset: {fileID: 0}
---- !u!1001 &6454657744275436143
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    serializedVersion: 3
-    m_TransformParent: {fileID: 1065802757563329524}
-    m_Modifications:
-    - target: {fileID: -8679921383154817045, guid: 7e642aca5add40e458b159a245d65a9c, type: 3}
-      propertyPath: m_LocalScale.x
-      value: 10
-      objectReference: {fileID: 0}
-    - target: {fileID: -8679921383154817045, guid: 7e642aca5add40e458b159a245d65a9c, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 0.7
-      objectReference: {fileID: 0}
-    - target: {fileID: -8679921383154817045, guid: 7e642aca5add40e458b159a245d65a9c, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: -3
-      objectReference: {fileID: 0}
-    - target: {fileID: -8679921383154817045, guid: 7e642aca5add40e458b159a245d65a9c, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 2.7
-      objectReference: {fileID: 0}
-    - target: {fileID: -8679921383154817045, guid: 7e642aca5add40e458b159a245d65a9c, type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 0.5
-      objectReference: {fileID: 0}
-    - target: {fileID: -8679921383154817045, guid: 7e642aca5add40e458b159a245d65a9c, type: 3}
-      propertyPath: m_LocalRotation.x
-      value: -0.5
-      objectReference: {fileID: 0}
-    - target: {fileID: -8679921383154817045, guid: 7e642aca5add40e458b159a245d65a9c, type: 3}
-      propertyPath: m_LocalRotation.y
-      value: -0.5
-      objectReference: {fileID: 0}
-    - target: {fileID: -8679921383154817045, guid: 7e642aca5add40e458b159a245d65a9c, type: 3}
-      propertyPath: m_LocalRotation.z
-      value: -0.5
-      objectReference: {fileID: 0}
-    - target: {fileID: -8679921383154817045, guid: 7e642aca5add40e458b159a245d65a9c, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: -90
-      objectReference: {fileID: 0}
-    - target: {fileID: -8679921383154817045, guid: 7e642aca5add40e458b159a245d65a9c, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: -90
-      objectReference: {fileID: 0}
-    - target: {fileID: -8679921383154817045, guid: 7e642aca5add40e458b159a245d65a9c, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 919132149155446097, guid: 7e642aca5add40e458b159a245d65a9c, type: 3}
-      propertyPath: m_Name
-      value: door (2)
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-    m_RemovedGameObjects: []
-    m_AddedGameObjects: []
-    m_AddedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: 7e642aca5add40e458b159a245d65a9c, type: 3}
---- !u!4 &6780508405409748356 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 7e642aca5add40e458b159a245d65a9c, type: 3}
-  m_PrefabInstance: {fileID: 6454657744275436143}
   m_PrefabAsset: {fileID: 0}
 --- !u!1001 &6771440278185621628
 PrefabInstance:
@@ -585,6 +530,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -7511558181221131132, guid: 8891b5cb7b9b4ba46aab9b53dba74796, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 43bd5c11b65627b4cb651ecd513574f6, type: 2}
     - target: {fileID: 919132149155446097, guid: 8891b5cb7b9b4ba46aab9b53dba74796, type: 3}
       propertyPath: m_Name
       value: wall_half
@@ -729,6 +678,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -7511558181221131132, guid: 8891b5cb7b9b4ba46aab9b53dba74796, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 43bd5c11b65627b4cb651ecd513574f6, type: 2}
     - target: {fileID: 919132149155446097, guid: 8891b5cb7b9b4ba46aab9b53dba74796, type: 3}
       propertyPath: m_Name
       value: wall_half (1)
@@ -751,6 +704,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1065802757563329524}
     m_Modifications:
+    - target: {fileID: 2647165139602627532, guid: b99c0fac8127abc428a91be0cd0b89af, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 43bd5c11b65627b4cb651ecd513574f6, type: 2}
     - target: {fileID: 3816715437212704931, guid: b99c0fac8127abc428a91be0cd0b89af, type: 3}
       propertyPath: m_LocalScale.x
       value: 10
@@ -799,6 +756,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: doorInteract
       objectReference: {fileID: 0}
+    - target: {fileID: 4609411332352883355, guid: b99c0fac8127abc428a91be0cd0b89af, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 236000e6c7a452f4e9a402ec4e44758e, type: 2}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
