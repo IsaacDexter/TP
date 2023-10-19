@@ -8,20 +8,28 @@ using UnityEngine.UIElements;
 
 public class PlayerUIManager : MonoBehaviour
 {
-    [SerializeField, Tooltip("List for the scared faces")] private List<Sprite> poopFaces;
-    [SerializeField] private UnityEngine.UI.Image poopFace;
-    [SerializeField] private UnityEngine.UI.Image scaredFace;
-
-    private const float scareDuration = 1.8f;
-    private const float fadeDuration = 0.18f;
-
+    [Header("References")]
+    [SerializeField] private FadableImage face;
+    [SerializeField, Tooltip("These should be siblings with the face, so use the face's parent")] private Transform transitionTransform;
+    [SerializeField, Tooltip("These should be siblings with the parent of the face, so use the face's parent's parent")] private Transform overlayTransform;
     [SerializeField] private TextMeshProUGUI messenger;
+
+    [Header("Sprites")]
+    [SerializeField, Tooltip("List of sprites for the pooping stages")] private List<Sprite> poopFaces;
+    [SerializeField, Tooltip("sprite for the scared stage")] private Sprite scaredFace;
+
+    [Header("Transitions")]
+    [SerializeField, Range(0.0f, 5.0f), Tooltip("How long to display the scared face")] private float scaredDuration = 1.5f;
+    [SerializeField, Range(0.0f, 5.0f), Tooltip("How quick to fade in/out the scared face")] private float scaredFadeDuration = 0.25f;
+    [SerializeField, Range(0.0f, 5.0f), Tooltip("How quick to fade between the poop stages")] private float poopFadeDuration = 0.5f;
+    /// <summary>The current face's index, with the default being the starting index. stored for early outs.</summary>
+    private int currentIndex = 0;
+
     // Start is called before the first frame update
     void Start()
     {
-        poopFace.sprite = poopFaces[0];
-        scaredFace.color = Color.black;
-    }
+        //Set the face and the face to the default
+        face.sprite = poopFaces[currentIndex];}
 
     public void DisplayMessage(string message)
     {
@@ -45,24 +53,22 @@ public class PlayerUIManager : MonoBehaviour
         }
     }
 
-    public void ShowScaredFace(float duration = scareDuration)
+    public void ShowScaredFace()
     {
-        Debug.Log("Showed Scared face");
-        CancelInvoke("HideScaredFace");
-        scaredFace.CrossFadeColor(Color.white, fadeDuration, false, true);
-        Invoke("HideScaredFace", duration);   //Invoke its hiding after the set duration
+        face.OverlaySprite(scaredFace, scaredFadeDuration, scaredDuration, overlayTransform);
     }
 
-    void HideScaredFace()
-    {
-        Debug.Log("Hid Scared face");
-        scaredFace.CrossFadeColor(Color.clear, fadeDuration, false, true);
-    }
 
     public void UpdateFace(float poop)
     {
-        poop *= poopFaces.Count;    //Multiply the current poop level by the number of faces to find how far through the face should be
-        int index = Math.Clamp((int)Math.Truncate(poop), 0, poopFaces.Count - 1);   //Find the index from that poop level by truncating, clamping it within the size incase poop is FULL
-        poopFace.sprite = poopFaces[index]; //Set the face to the appropriate poop level
+        //find the new index by finding how far through the indexes the poop, is and truncating
+        int newIndex = (int)Math.Truncate(poop * poopFaces.Count);
+        //if a change needs to be made
+        if (newIndex != currentIndex)
+        {
+            currentIndex = newIndex;
+            //Clone the transition face.
+            face.TransitionSprite(poopFaces[currentIndex], poopFadeDuration, transitionTransform);
+        } 
     }
 }
