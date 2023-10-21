@@ -5,12 +5,11 @@ using UnityEngine.UI;
 
 public class PoopBarUI : MonoBehaviour
 {
-    [SerializeField] public Slider PoopBar;
+    public Slider PoopBar;
 
     private PlayerStatManager stats;
     private PlayerUIManager ui;
     private GameObject player;
-
 
     // Start is called before the first frame update
     void Start()
@@ -25,10 +24,9 @@ public class PoopBarUI : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (PoopBar.value < PoopBar.maxValue)
+        if (stats.GetPoop() < PoopBar.maxValue)
         {
             PoopBar.value = stats.GetPoop();
         }
     }
-    
 }

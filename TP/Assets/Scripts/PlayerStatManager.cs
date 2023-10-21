@@ -17,7 +17,7 @@ public class PlayerStatManager : MonoBehaviour
     [Header("Gameplay")]
     [SerializeField, Range(0.0f, 1.0f), Tooltip("Player's poop level, with 0 being empty, and 1 being turtlenecking")] private float poop;
 
-    [SerializeField, Range(0.0f, 0.0001f), Tooltip("Poop increase per update")] private float poopIncreaseOverTime;
+    [SerializeField, Range(0.0f, 0.0001f), Tooltip("Poop increase per update")] public float poopIncreaseOverTime;
 
     /// <summary>Increase the players poop, to a maximum of 1</summary>
     /// <param name="amount">The amount to increase poop by</param>
@@ -38,9 +38,14 @@ public class PlayerStatManager : MonoBehaviour
         return poop;
     }
 
+    public void SetPoop(float amount)
+    {
+        poop = amount;
+    }
+
     // Update is called once per frame
     void Update()
     {
-        IncreasePoop(poopIncreaseOverTime);   
+           
     }
 }
