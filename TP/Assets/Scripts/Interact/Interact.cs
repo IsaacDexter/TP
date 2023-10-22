@@ -22,7 +22,7 @@ public class Interact : MonoBehaviour
         {
             var interactable = colliders[0].GetComponent<InteractableObject>();  //get interactable object
 
-            if (interactable != null && Input.GetKey(KeyCode.E)) //if there is an object and we press E, interact!
+            if (interactable != null && Input.GetKeyUp(KeyCode.E)) //if there is an object and we press E, interact!
             {
                 interactable.Interact(this);
             }
