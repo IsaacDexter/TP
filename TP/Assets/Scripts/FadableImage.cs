@@ -62,40 +62,30 @@ public class FadableImage : UnityEngine.UI.Image
         //Queue a coroutine to destroy the newImage and change the old image when the duration is up.
         StartCoroutine(FadeTimedOverlay(fadeDuration, duration));
     }
-
-    public void ToggleOverlaySprite(Sprite sprite, float fadeDuration, Transform transform)
+    public void OverlaySprite(Sprite sprite, float fadeDuration, Transform transform)
     {
-        //If this overlay doesn't already exist
         if (!overlays.ContainsKey(sprite))
         {
-            OverlaySprite(sprite, fadeDuration, transform);
-        }
-        else
-        {
-            RemoveOverlay(sprite, fadeDuration);
-        }
-    }
-    private void OverlaySprite(Sprite sprite, float fadeDuration, Transform transform)
-    {
-        //Make a clone copy of the image in the parents parent.
-        UnityEngine.UI.Image overlay = Instantiate(this, transform);
-        //Make it appear as the last sibling
-        overlay.transform.SetAsLastSibling();
+            //Make a clone copy of the image in the parents parent.
+            UnityEngine.UI.Image overlay = Instantiate(this, transform);
+            //Make it appear as the last sibling
+            overlay.transform.SetAsLastSibling();
 
-        //store a reference to it
-        ref UnityEngine.UI.Image overlay_ref = ref overlay;
+            //store a reference to it
+            ref UnityEngine.UI.Image overlay_ref = ref overlay;
 
-        //Put a reference to image in the dictionary
-        overlays.TryAdd(sprite, overlay);
-        //Set the new images's canvas renderer to be invisible, allowing crossfade alpha to function while rendering the sprite initially invisible
-        overlay_ref.GetComponent<CanvasRenderer>().SetAlpha(0.0f);
-        //Set the new images sprite to the desired one
-        overlay_ref.sprite = sprite;
-        //Crossfade the new image's alpha 
-        overlay_ref.CrossFadeAlpha(1.0f, fadeDuration, false);
+            //Put a reference to image in the dictionary
+            overlays.TryAdd(sprite, overlay);
+            //Set the new images's canvas renderer to be invisible, allowing crossfade alpha to function while rendering the sprite initially invisible
+            overlay_ref.GetComponent<CanvasRenderer>().SetAlpha(0.0f);
+            //Set the new images sprite to the desired one
+            overlay_ref.sprite = sprite;
+            //Crossfade the new image's alpha 
+            overlay_ref.CrossFadeAlpha(1.0f, fadeDuration, false);
+        }
     }
     
-    private void RemoveOverlay(Sprite sprite, float fadeDuration)
+    public void RemoveOverlay(Sprite sprite, float fadeDuration)
     {
         //Start the overlay fading out
         if (overlays.TryGetValue(sprite, out var overlay))

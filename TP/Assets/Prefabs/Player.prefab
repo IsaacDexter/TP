@@ -171,8 +171,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   playerCamera: {fileID: 3199454274844679069}
-  walkSpeed: 4
-  runSpeed: 6
+  walkSpeed: 3.5
+  runSpeed: 7
   runCost: 12
   jumpPower: 0
   gravity: 10
@@ -211,7 +211,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   MashThreshold: 1
   MashLives: 2
-  MashMessage: ABOUT TO POOP!!!! MASH F
+  MashMessage: ABOUT TO POOP!!! MASH F!!!
   stats: {fileID: -2398447930204369094}
   ui: {fileID: 1657529787276678102}
   controller: {fileID: 7989239810684601012}
@@ -238,7 +238,7 @@ MonoBehaviour:
   poop: 0
   poopIncrease: 0.01
   isRunning: 0
-  runningPoopIncrease: 0.03
+  runningPoopIncrease: 0.04
 --- !u!1 &3759465962314104735
 GameObject:
   m_ObjectHideFlags: 0

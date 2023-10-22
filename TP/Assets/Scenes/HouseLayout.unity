@@ -20849,6 +20849,14 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: -2398447930204369094, guid: 5242788bda3046145add285c13529875, type: 3}
+      propertyPath: runningPoopSpeed
+      value: 0.04
+      objectReference: {fileID: 0}
+    - target: {fileID: -2398447930204369094, guid: 5242788bda3046145add285c13529875, type: 3}
+      propertyPath: walkingPoopSpeed
+      value: 0.008
+      objectReference: {fileID: 0}
     - target: {fileID: 1426898502039395761, guid: 5242788bda3046145add285c13529875, type: 3}
       propertyPath: m_AnchorMax.x
       value: 0
@@ -20903,6 +20911,10 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5602022006779487123, guid: 5242788bda3046145add285c13529875, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6381621805778004196, guid: 5242788bda3046145add285c13529875, type: 3}
+      propertyPath: m_AnchorMax.y
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8826047545656583663, guid: 5242788bda3046145add285c13529875, type: 3}

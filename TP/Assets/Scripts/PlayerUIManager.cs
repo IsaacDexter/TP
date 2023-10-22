@@ -20,8 +20,10 @@ public class PlayerUIManager : MonoBehaviour
     [SerializeField, Tooltip("List of sprites for the pooping stages")] private List<Sprite> poopFaces;
     [SerializeField, Tooltip("sprite for the scared stage")] private Sprite scaredFace;
     [SerializeField, Tooltip("sprite for running")] private Sprite runningFace;
+    [SerializeField, Tooltip("sprite for turtlenecking")] private Sprite turtleneckingFace;
     [SerializeField, Tooltip("Colour of running bar")] private Color runningColor;
     [SerializeField, Tooltip("Colour of poop bar")] private Color poopColor;
+    [SerializeField, Tooltip("Colour of turtlenecking bar")] private Color turtleneckingColor;
 
     [Header("Transitions")]
     [SerializeField, Range(0.0f, 5.0f), Tooltip("How long to display the scared face")] private float scaredDuration = 1.5f;
@@ -64,17 +66,28 @@ public class PlayerUIManager : MonoBehaviour
         face.OverlaySprite(scaredFace, scaredFadeDuration, scaredDuration, overlayTransform);
     }
     
-    public void ToggleRunningFace()
+    public void ShowRunningFace()
     {
-        face.ToggleOverlaySprite(runningFace, scaredFadeDuration, overlayTransform);
-        if(poopSlider.color == poopColor)
-        {
-            poopSlider.color = runningColor;
-        }
-        else
-        {
-            poopSlider.color = poopColor;
-        }
+        face.OverlaySprite(runningFace, scaredFadeDuration, overlayTransform);
+        FadeBar(runningColor, scaredFadeDuration);
+    }
+    
+    public void HideRunningFace()
+    {
+        face.RemoveOverlay(runningFace, scaredFadeDuration);
+        FadeBar(poopColor, scaredFadeDuration);
+    }
+    
+    public void ShowTurtleneckingFace()
+    {
+        face.OverlaySprite(turtleneckingFace, scaredFadeDuration, overlayTransform);
+        FadeBar(turtleneckingColor, scaredFadeDuration);
+    }
+    
+    public void HideTurtleneckingFace()
+    {
+        face.RemoveOverlay(turtleneckingFace, scaredFadeDuration);
+        FadeBar(poopColor, scaredFadeDuration);
     }
 
     public void UpdateFace(float poop)
@@ -88,5 +101,21 @@ public class PlayerUIManager : MonoBehaviour
             //Clone the transition face.
             face.TransitionSprite(poopFaces[currentIndex], poopFadeDuration, transitionTransform);
         } 
+    }
+
+    private IEnumerator FadeColor(UnityEngine.UI.Image image, Color startColor, Color color, float duration, float timer)
+    {
+        while (image.color != color)
+        {
+            timer += Time.deltaTime;
+            image.color = Color.Lerp(startColor, color, timer / duration);
+            yield return null;
+        }
+    }
+
+    private void FadeBar(Color color, float duration)
+    {
+        StopAllCoroutines();
+        StartCoroutine(FadeColor(poopSlider, poopSlider.color, color, duration, 0.0f));
     }
 }
