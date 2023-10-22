@@ -129,4 +129,28 @@ public class FadableImage : UnityEngine.UI.Image
         //destroy the overlay
         Destroy(timedOverlays.Dequeue().gameObject);
     }
+
+    public void FadeIn(float fadeDuration)
+    {
+        CrossFadeAlpha(1.0f, fadeDuration, false);
+    }
+    
+    public void FadeOut(float fadeDuration)
+    {
+        CrossFadeAlpha(0.0f, fadeDuration, false);
+    }
+
+    public void FadeInAndOut(float fadeDuration, float duration)
+    {
+        FadeIn(fadeDuration);
+
+        StartCoroutine(DelayedFadeOut(fadeDuration, duration));
+    }
+
+    private IEnumerator DelayedFadeOut(float fadeDuration, float duration)
+    {
+        yield return new WaitForSeconds(fadeDuration + duration);
+
+        CrossFadeAlpha(0.0f, fadeDuration, false);
+    }
 }

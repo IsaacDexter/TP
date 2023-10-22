@@ -34,6 +34,7 @@ public class Chaser : MonoBehaviour
         {
             //Find the vector to the destination
             direction = destination.transform.position - transform.position;
+            transform.LookAt(destination.transform.position);
             //if we've reached our destination
             if (direction.sqrMagnitude < sqrDistance)
             {
@@ -56,11 +57,9 @@ public class Chaser : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        Debug.Log("Hit summit");
         //If we've hit the player
         if (other.gameObject.name == "Player")
         {
-            Debug.Log("Hit Player");
             Player player = other.GetComponentInParent<Player>();
             player.Scare(poop);
             audioSource.Play();
