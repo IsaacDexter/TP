@@ -8,13 +8,13 @@ using UnityEngine;
 public class FirstPersonController : MonoBehaviour
 {
     [SerializeField] private Camera playerCamera;
-    [SerializeField] private float walkSpeed = 6f;
-    [SerializeField] private float runSpeed = 12f;
-    [SerializeField] private float jumpPower = 7f;
-    [SerializeField] private float gravity = 10f;
+    [SerializeField, Range(0.0f, 20.0f)] private float walkSpeed = 6f;
+    [SerializeField, Range(0.0f, 20.0f)] private float runSpeed = 12f;
+    [SerializeField, Range(0.0f, 20.0f)] private float jumpPower = 7f;
+    [SerializeField, Range(0.0f, 20.0f)] private float gravity = 10f;
 
-    [SerializeField] private float lookSpeed = 2f;
-    [SerializeField] private float lookXLimit = 45f;
+    [SerializeField, Range(0.0f, 10.0f)] private float lookSpeed = 2f;
+    [SerializeField, Range(0.0f, 90.0f)] private float lookXLimit = 45f;
 
     Vector3 moveDirection = Vector3.zero;
     float rotationX = 0;
