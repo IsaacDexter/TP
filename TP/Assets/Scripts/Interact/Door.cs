@@ -6,32 +6,59 @@ using UnityEngine.SceneManagement;
 public class Door : InteractableObject
 {
     [SerializeField] private GameObject teleportLocation;
-    private GameObject player;
-    [SerializeField]private AudioSource doorOpen;
-    private PlayerStatManager stats;
+
+    private Player player = null;
+    private IEnumerator delayedTask;
 
     private void Start()
     {
-        player = GameObject.FindGameObjectWithTag("Player");
-        stats = player.GetComponent<PlayerStatManager>();
+
     }
 
     override public bool Interact(Interact interact)
     {
-        if(stats.PlayerUsedToilet)
+
+        //If theres a player
+        if (player != null)
         {
-            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1); //if player used toilet, door takes them to next level
+            //And the door Leads somewhere
+            if (teleportLocation != null)
+            {
+                player.Blink();
+
+                //teleport the player to that somewhere
+                Teleport(player.ui.scaredFadeDuration);
+
+                return true;
+            }
+            //If the door leads nowhere
+            else
+            {
+                //It's locked
+                return false;            
+            }
         }
-        else
+        //The player was not close enough
+        return false;
+    }
+
+    private IEnumerator TeleportAfterDelay(float delay)
+    {
+        yield return new WaitForSeconds(delay);
+
+        player.transform.position = teleportLocation.transform.position;
+        delayedTask = null;
+    }
+
+    private void Teleport(float delay)
+    {
+        //Prevent double teleport
+        if(delayedTask == null)
         {
-            player.transform.position = teleportLocation.transform.position;
-        
-            //add transition + sfx :)
-            doorOpen.Play();
+            delayedTask = TeleportAfterDelay(delay);
+            StartCoroutine(delayedTask);
         }
 
-        
-        return true;
     }
 
     public void OnTriggerEnter(Collider other)
@@ -40,7 +67,7 @@ public class Door : InteractableObject
         if (other.gameObject.name == "Player")
         {
             //Show it that it can interact
-            Player player = other.GetComponentInParent<Player>();
+            player = other.GetComponentInParent<Player>();
             player.ui.DisplayMessage(InteractionPrompt);
         }
     }
@@ -51,7 +78,7 @@ public class Door : InteractableObject
         if (other.gameObject.name == "Player")
         {
             //Hide its interact message
-            Player player = other.GetComponentInParent<Player>();
+            player = other.GetComponentInParent<Player>();
             player.ui.ClearMessage(InteractionPrompt);
         }
     }

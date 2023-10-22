@@ -36,6 +36,11 @@ public class Player : MonoBehaviour
         stateMachine.Update();
     }
 
+    public void Blink()
+    {
+        ui.FadeThroughBlack();
+    }
+
     public void GameOver()
     {
         ui.FadeToBlack();
