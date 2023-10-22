@@ -7,20 +7,30 @@ public class Toilet : InteractableObject
     private GameObject player;
     private PlayerStatManager stats;
     private PlayerUIManager ui;
+
+    private AudioSource flushSFX;
+
     // Start is called before the first frame update
     private void Start()
     {
         player = GameObject.FindGameObjectWithTag("Player");
         stats = player.GetComponent<PlayerStatManager>();
         ui = player.GetComponentInChildren<PlayerUIManager>();
+        flushSFX = GetComponent<AudioSource>();
     }
 
     override public bool Interact(Interact interact)
     {
         Debug.Log("interacted");
         //sit player on toilet
-        //list stats and increases 
 
+        //reset poop bar
+        stats.SetPoop(0.0f);
+
+        //play flush sfx
+        flushSFX.Play();
+
+        //list stats and increases 
         ui.ClearMessage();
         ui.DisplayMessage(stats.GetStatIncreases());
         return true;

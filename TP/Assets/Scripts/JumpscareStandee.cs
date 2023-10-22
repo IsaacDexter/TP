@@ -6,16 +6,11 @@ using UnityEngine;
 public class JumpscareStandee : MonoBehaviour
 {
     [SerializeField, Range(0.0f, 1.0f), Tooltip("The amount of poop to increase the scaree by.")] private float poopIncrease = 0.0f;
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
+    private AudioSource scareSound;
 
-    // Update is called once per frame
-    void Update()
+    private void Start()
     {
-        
+        scareSound = GetComponent<AudioSource>();
     }
 
     public void OnTriggerEnter(Collider other)
@@ -25,6 +20,7 @@ public class JumpscareStandee : MonoBehaviour
         {
             Player player = other.GetComponentInParent<Player>();
             player.Scare(poopIncrease);
+            scareSound.Play();
         }
         GetComponent<Collider>().enabled = false;
     }
