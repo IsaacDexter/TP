@@ -171,9 +171,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   playerCamera: {fileID: 3199454274844679069}
-  walkSpeed: 6
-  runSpeed: 12
-  jumpPower: 7
+  walkSpeed: 4
+  runSpeed: 6
+  runCost: 12
+  jumpPower: 0
   gravity: 10
   lookSpeed: 2
   lookXLimit: 45
@@ -208,8 +209,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e34623f4e6008f6468bbcde8d3900858, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  MashThreshold: 1
+  MashLives: 2
+  MashMessage: ABOUT TO POOP!!!! MASH F
   stats: {fileID: -2398447930204369094}
   ui: {fileID: 1657529787276678102}
+  controller: {fileID: 7989239810684601012}
 --- !u!114 &-2398447930204369094
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -231,7 +236,9 @@ MonoBehaviour:
   solidity: 0.7
   stinkyness: 0.2
   poop: 0
-  poopIncreaseOverTime: 0.0000433
+  poopIncrease: 0.01
+  isRunning: 0
+  runningPoopIncrease: 0.03
 --- !u!1 &3759465962314104735
 GameObject:
   m_ObjectHideFlags: 0
@@ -378,6 +385,14 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 5602022006779487123}
     m_Modifications:
+    - target: {fileID: 2159674984076703863, guid: ccd3866cef3876c489b7e0a479ffc2fa, type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2159674984076703863, guid: ccd3866cef3876c489b7e0a479ffc2fa, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 3044801954213316775, guid: ccd3866cef3876c489b7e0a479ffc2fa, type: 3}
       propertyPath: stats
       value: 
