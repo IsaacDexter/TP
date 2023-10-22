@@ -1,22 +1,35 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class Door : InteractableObject
 {
     [SerializeField] private GameObject teleportLocation;
     private GameObject player;
+    [SerializeField]private AudioSource doorOpen;
+    private PlayerStatManager stats;
 
     private void Start()
     {
         player = GameObject.FindGameObjectWithTag("Player");
+        stats = player.GetComponent<PlayerStatManager>();
     }
 
     override public bool Interact(Interact interact)
     {
-        player.transform.position = teleportLocation.transform.position;
+        if(stats.PlayerUsedToilet)
+        {
+            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1); //if player used toilet, door takes them to next level
+        }
+        else
+        {
+            player.transform.position = teleportLocation.transform.position;
         
-        //add transition + sfx :)
+            //add transition + sfx :)
+            doorOpen.Play();
+        }
+
         
         return true;
     }
