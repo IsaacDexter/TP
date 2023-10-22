@@ -1,6 +1,9 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
+using Unity.Mathematics;
 using UnityEngine;
+using Random = UnityEngine.Random;
 
 public class PlayerStatManager : MonoBehaviour
 {
@@ -18,6 +21,9 @@ public class PlayerStatManager : MonoBehaviour
     [SerializeField, Range(0.0f, 1.0f), Tooltip("Player's poop level, with 0 being empty, and 1 being turtlenecking")] private float poop;
 
     [SerializeField, Range(0.0f, 0.0001f), Tooltip("Poop increase per update")] public float poopIncreaseOverTime;
+
+
+    
 
     /// <summary>Increase the players poop, to a maximum of 1</summary>
     /// <param name="amount">The amount to increase poop by</param>
@@ -43,9 +49,56 @@ public class PlayerStatManager : MonoBehaviour
         poop = amount;
     }
 
-    // Update is called once per frame
-    void Update()
+    public string GetStatIncreases()
     {
-           
+        //Sphincter Diameter
+        float sDiam = Mathf.Round(Random.Range(0.0f, 1.0f) * 100.0f) * 0.01f;
+        sphincterDiameter += sDiam;
+        //Sphincter Diameter Multiplier
+        float sDiamMul = Mathf.Round(Random.Range(0.0f, 5.0f) * 100.0f) * 0.1f;
+        sphincterDiameterMultiplier += sDiamMul;
+        //Small Intestine Length
+        float sIntLen = Mathf.Round(Random.Range(0.0f, 100.0f) * 100.0f) * 0.1f;
+        smallIntestineLength += sIntLen;
+        //Small Intestine Width
+        float sIntWid = Mathf.Round(Random.Range(0.0f, 5.0f) * 100.0f) * 0.1f;
+        smallIntestineWidth += sIntWid;
+        //Colon Volume
+        float colVol = Mathf.Round(Random.Range(0.0f, 50.0f) * 100.0f) * 0.1f;
+        colonVolume += colVol;
+        //Logs Per Minute
+        float lpm = Mathf.Round(Random.Range(0.0f, 1.0f) * 100.0f) * 0.1f;
+        logsPerMinute += lpm;
+        //Solidity
+        float sol = Mathf.Round(Random.Range(0.0f, 1.0f) * 100.0f) * 0.1f;
+        solidity += sol;
+        //Stinkiness
+        float stink = Mathf.Round(Random.Range(0.0f, 3.0f) * 100.0f) * 0.1f;
+        stinkyness += stink;
+
+        return (
+            "+ " + sDiam + "cm Sphincter Diameter" +
+            "\n+ " + sDiamMul + " Sphincter Diameter Multiplier" +
+            "\n+ " + sIntLen + "cm Small Intestine Length" +
+            "\n+ " + sIntWid + "cm Small Intestine Width" +
+            "\n+ " + colVol + "ml Colon Volume" +
+            "\n+ " + lpm + " Logs Per Minute" +
+            "\n+ " + sol + " Solidity" +
+            "\n+ " + stink + " Stinkiness"
+            );
+    }
+
+    public string GetStatDisplay()
+    {
+        return (
+            "Sphincter Diameter : " + sphincterDiameter + "cm" +
+            "\nSphincter Diameter Multiplier : " + sphincterDiameterMultiplier +
+            "\nSmall Intestine Length : " + smallIntestineLength + "cm" +
+            "\nSmall Intestine Width : " + smallIntestineWidth + "cm" +
+            "\nColon Volume : " + colonVolume + "ml" +
+            "\nLogs Per Minute : " + logsPerMinute +
+            "\nSolidity : " + solidity +
+            "\n Stinkiness : " + stinkyness
+            );
     }
 }
