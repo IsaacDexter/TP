@@ -2,6 +2,7 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using Unity.Mathematics;
+using Unity.VisualScripting.Antlr3.Runtime.Misc;
 using UnityEngine;
 using Random = UnityEngine.Random;
 
@@ -19,9 +20,10 @@ public class PlayerStatManager : MonoBehaviour
 
     [Header("Gameplay")]
     [SerializeField, Range(0.0f, 1.0f), Tooltip("Player's poop level, with 0 being empty, and 1 being turtlenecking")] private float poop;
-
-    [SerializeField, Range(0.0f, 0.0001f), Tooltip("Poop increase per update")] public float poopIncreaseOverTime;
-
+    [SerializeField, Range(0.0f, 1.0f), Tooltip("Poop increase per second")] public float poopIncrease;
+   
+    [HideInInspector] public bool isRunning = false;
+    [SerializeField, Range(0.0f, 1.0f), Tooltip("Poop increase per second. Does not stack!")] public float runningPoopIncrease;
 
     
 
@@ -47,6 +49,14 @@ public class PlayerStatManager : MonoBehaviour
     public void SetPoop(float amount)
     {
         poop = amount;
+    }
+
+    /// <summary>Ticks up the poop according to the increase and delta time </summary>
+    /// <returns>Whether or not the poop is full</returns>
+    public float TickPoop()
+    {
+        IncreasePoop((isRunning ? runningPoopIncrease : poopIncrease) * Time.deltaTime);
+        return poop;
     }
 
     public string GetStatIncreases()

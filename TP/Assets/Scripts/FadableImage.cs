@@ -7,7 +7,8 @@ using UnityEngine.ProBuilder;
 public class FadableImage : UnityEngine.UI.Image
 {
     private Queue<UnityEngine.UI.Image> transitions = new Queue<UnityEngine.UI.Image>();
-    private Queue<UnityEngine.UI.Image> overlays = new Queue<UnityEngine.UI.Image>();
+    private Queue<UnityEngine.UI.Image> timedOverlays = new Queue<UnityEngine.UI.Image>();
+    private Dictionary<Sprite, UnityEngine.UI.Image> overlays = new Dictionary<Sprite, UnityEngine.UI.Image>();
     public void TransitionSprite(Sprite sprite, float fadeDuration, Transform transform)
     {
         //Make a clone copy of the image in the parent.
@@ -43,42 +44,99 @@ public class FadableImage : UnityEngine.UI.Image
     public void OverlaySprite(Sprite sprite, float fadeDuration, float duration, Transform transform)
     {
         //Make a clone copy of the image in the parents parent.
+        UnityEngine.UI.Image timedOverlay = Instantiate(this, transform);
+        //Make it appear as the last sibling
+        timedOverlay.transform.SetAsLastSibling();
+
+        //store a reference to it
+        ref UnityEngine.UI.Image timedOverlay_ref = ref timedOverlay;
+        //Put a reference to image in the queue
+        this.timedOverlays.Enqueue(timedOverlay);
+
+        //Set the new images's canvas renderer to be invisible, allowing crossfade alpha to function while rendering the sprite initially invisible
+        timedOverlay_ref.GetComponent<CanvasRenderer>().SetAlpha(0.0f);
+        //Set the new images sprite to the desired one
+        timedOverlay_ref.sprite = sprite;
+        //Crossfade the new image's alpha 
+        timedOverlay_ref.CrossFadeAlpha(1.0f, fadeDuration, false);
+        //Queue a coroutine to destroy the newImage and change the old image when the duration is up.
+        StartCoroutine(FadeTimedOverlay(fadeDuration, duration));
+    }
+
+    public void ToggleOverlaySprite(Sprite sprite, float fadeDuration, Transform transform)
+    {
+        //If this overlay doesn't already exist
+        if (!overlays.ContainsKey(sprite))
+        {
+            OverlaySprite(sprite, fadeDuration, transform);
+        }
+        else
+        {
+            RemoveOverlay(sprite, fadeDuration);
+        }
+    }
+    private void OverlaySprite(Sprite sprite, float fadeDuration, Transform transform)
+    {
+        //Make a clone copy of the image in the parents parent.
         UnityEngine.UI.Image overlay = Instantiate(this, transform);
         //Make it appear as the last sibling
         overlay.transform.SetAsLastSibling();
 
         //store a reference to it
         ref UnityEngine.UI.Image overlay_ref = ref overlay;
-        //Put a reference to image in the queue
-        this.overlays.Enqueue(overlay);
 
+        //Put a reference to image in the dictionary
+        overlays.TryAdd(sprite, overlay);
         //Set the new images's canvas renderer to be invisible, allowing crossfade alpha to function while rendering the sprite initially invisible
         overlay_ref.GetComponent<CanvasRenderer>().SetAlpha(0.0f);
         //Set the new images sprite to the desired one
         overlay_ref.sprite = sprite;
         //Crossfade the new image's alpha 
         overlay_ref.CrossFadeAlpha(1.0f, fadeDuration, false);
-        //Queue a coroutine to destroy the newImage and change the old image when the duration is up.
-        StartCoroutine(FadeOverlay(fadeDuration, duration));
     }
     
-    private IEnumerator FadeOverlay(float fadeDuration, float duration)
+    private void RemoveOverlay(Sprite sprite, float fadeDuration)
+    {
+        //Start the overlay fading out
+        if (overlays.TryGetValue(sprite, out var overlay))
+        {
+            StopCoroutine(FadeOverlay(sprite, fadeDuration));
+            overlay.CrossFadeAlpha(0.0f, fadeDuration, false);
+            StartCoroutine(FadeOverlay(sprite, fadeDuration));
+        }
+    }
+
+    private IEnumerator FadeOverlay(Sprite sprite, float fadeDuration)
+    {
+        //Delay until the fade out is complete
+        yield return new WaitForSeconds(fadeDuration);
+
+        //if the overlay exists
+        if (overlays.TryGetValue(sprite, out var overlay))
+        {
+            //destroy it
+            Destroy(overlay.gameObject);
+            overlays.Remove(sprite);
+        }
+    }
+    
+    private IEnumerator FadeTimedOverlay(float fadeDuration, float duration)
     {
         //Delay until the fade in is complete, and for the scare to be on screen for its duration
         yield return new WaitForSeconds(fadeDuration + duration);
 
         //Start the overlay fading out
-        overlays.Peek().CrossFadeAlpha(0.0f, fadeDuration, false);
+        timedOverlays.Peek().CrossFadeAlpha(0.0f, fadeDuration, false);
         //Set the overlay to be deleted once the fade out is complete
-        StartCoroutine(RemoveOverlay(fadeDuration));
+        StartCoroutine(RemoveTimedOverlay(fadeDuration));
     }
     
-    private IEnumerator RemoveOverlay(float fadeDuration)
+    private IEnumerator RemoveTimedOverlay(float fadeDuration)
     {
         //Delay until the fade out is complete
         yield return new WaitForSeconds(fadeDuration);
 
         //destroy the overlay
-        Destroy(overlays.Dequeue().gameObject);
+        Destroy(timedOverlays.Dequeue().gameObject);
     }
 }
