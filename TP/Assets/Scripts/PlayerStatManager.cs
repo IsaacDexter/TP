@@ -24,7 +24,12 @@ public class PlayerStatManager : MonoBehaviour
    
     [SerializeField, Range(0.0f, 1.0f), Tooltip("Poop increase per second. Does not stack!")] public float runningPoopSpeed;
 
-    
+    public bool PlayerUsedToilet;
+
+    private void Start()
+    {
+        PlayerUsedToilet = false;
+    }
 
     /// <summary>Increase the players poop, to a maximum of 1</summary>
     /// <param name="amount">The amount to increase poop by</param>

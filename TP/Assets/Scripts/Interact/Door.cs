@@ -1,19 +1,23 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class Door : InteractableObject
 {
     [SerializeField] private GameObject teleportLocation;
+
     private Player player = null;
     private IEnumerator delayedTask;
 
     private void Start()
     {
+
     }
 
     override public bool Interact(Interact interact)
     {
+
         //If theres a player
         if (player != null)
         {
@@ -54,6 +58,7 @@ public class Door : InteractableObject
             delayedTask = TeleportAfterDelay(delay);
             StartCoroutine(delayedTask);
         }
+
     }
 
     public void OnTriggerEnter(Collider other)

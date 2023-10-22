@@ -22,8 +22,9 @@ public class Toilet : InteractableObject
     override public bool Interact(Interact interact)
     {
         Debug.Log("interacted");
+        stats.PlayerUsedToilet = true;
         //sit player on toilet
-
+        
         //reset poop bar
         stats.SetPoop(0.0f);
 
