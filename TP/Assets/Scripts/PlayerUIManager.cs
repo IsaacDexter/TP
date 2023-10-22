@@ -17,7 +17,6 @@ public class PlayerUIManager : MonoBehaviour
     [SerializeField] private UnityEngine.UI.Image poopSlider;
     private IEnumerator poopSliderFadeRoutine;
     [SerializeField] private FadableImage blackscreen;
-    private IEnumerator blackscreenRoutine;
 
 
     [Header("Sprites")]
@@ -31,7 +30,7 @@ public class PlayerUIManager : MonoBehaviour
 
     [Header("Transitions")]
     [SerializeField, Range(0.0f, 5.0f), Tooltip("How long to display the scared face")] private float scaredDuration = 1.5f;
-    [SerializeField, Range(0.0f, 5.0f), Tooltip("How quick to fade in/out the scared face")] private float scaredFadeDuration = 0.25f;
+    [SerializeField, Range(0.0f, 5.0f), Tooltip("How quick to fade in/out the scared face")] public float scaredFadeDuration = 0.25f;
     [SerializeField, Range(0.0f, 5.0f), Tooltip("How quick to fade between the poop stages")] private float poopFadeDuration = 0.5f;
     /// <summary>The current face's index, with the default being the starting index. stored for early outs.</summary>
     private int currentIndex = 0;
@@ -49,6 +48,10 @@ public class PlayerUIManager : MonoBehaviour
     public void DisplayMessage(string message)
     {
         messenger.SetText(message);
+    }
+    public void DisplayMessage(TextMeshProUGUI message)
+    {
+        messenger = message;
     }
     public void DisplayMessage(string message, float duration)
     {
