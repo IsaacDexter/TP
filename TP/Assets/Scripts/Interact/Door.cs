@@ -6,10 +6,12 @@ public class Door : InteractableObject
 {
     [SerializeField] private GameObject teleportLocation;
     private GameObject player;
+    [SerializeField]private AudioSource doorOpen;
 
     private void Start()
     {
         player = GameObject.FindGameObjectWithTag("Player");
+        //doorOpen = GetComponentInChildren<AudioSource>();
     }
 
     override public bool Interact(Interact interact)
@@ -17,6 +19,7 @@ public class Door : InteractableObject
         player.transform.position = teleportLocation.transform.position;
         
         //add transition + sfx :)
+        doorOpen.Play();
         
         return true;
     }
