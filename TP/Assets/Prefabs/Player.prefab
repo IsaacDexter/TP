@@ -209,9 +209,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e34623f4e6008f6468bbcde8d3900858, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  MashThreshold: 1
-  MashLives: 2
-  MashMessage: ABOUT TO POOP!!! MASH F!!!
   stats: {fileID: -2398447930204369094}
   ui: {fileID: 1657529787276678102}
   controller: {fileID: 7989239810684601012}
@@ -236,9 +233,8 @@ MonoBehaviour:
   solidity: 0.7
   stinkyness: 0.2
   poop: 0
-  poopIncrease: 0.01
-  isRunning: 0
-  runningPoopIncrease: 0.04
+  walkingPoopSpeed: 0.008
+  runningPoopSpeed: 0.04
 --- !u!1 &3759465962314104735
 GameObject:
   m_ObjectHideFlags: 0
@@ -409,6 +405,26 @@ PrefabInstance:
       propertyPath: m_SizeDelta.x
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5938028282409239365, guid: ccd3866cef3876c489b7e0a479ffc2fa, type: 3}
+      propertyPath: poopFaces.Array.data[0]
+      value: 
+      objectReference: {fileID: 21300000, guid: 0c55959dc7da44842a26bf1c15b62e32, type: 3}
+    - target: {fileID: 5938028282409239365, guid: ccd3866cef3876c489b7e0a479ffc2fa, type: 3}
+      propertyPath: poopFaces.Array.data[1]
+      value: 
+      objectReference: {fileID: 21300000, guid: d1aa830de489e61408e5184bc04192d9, type: 3}
+    - target: {fileID: 5938028282409239365, guid: ccd3866cef3876c489b7e0a479ffc2fa, type: 3}
+      propertyPath: poopFaces.Array.data[2]
+      value: 
+      objectReference: {fileID: 21300000, guid: 250ae65c663bb824bb1034832b8ab5f4, type: 3}
+    - target: {fileID: 5938028282409239365, guid: ccd3866cef3876c489b7e0a479ffc2fa, type: 3}
+      propertyPath: poopFaces.Array.data[3]
+      value: 
+      objectReference: {fileID: 21300000, guid: 01f03772adcb045449c6d99684752883, type: 3}
+    - target: {fileID: 5938028282409239365, guid: ccd3866cef3876c489b7e0a479ffc2fa, type: 3}
+      propertyPath: poopFaces.Array.data[4]
+      value: 
+      objectReference: {fileID: 21300000, guid: f0a58fd448757be4f9f7a020380f9bb5, type: 3}
     - target: {fileID: 5962166262416305690, guid: ccd3866cef3876c489b7e0a479ffc2fa, type: 3}
       propertyPath: m_Name
       value: HUD
