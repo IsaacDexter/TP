@@ -547,15 +547,17 @@ MonoBehaviour:
   messenger: {fileID: 1338034105112562679}
   poopSlider: {fileID: 8815648617546601800}
   poopFaces:
-  - {fileID: 21300000, guid: 0c55959dc7da44842a26bf1c15b62e32, type: 3}
-  - {fileID: 21300000, guid: d1aa830de489e61408e5184bc04192d9, type: 3}
-  - {fileID: 21300000, guid: 250ae65c663bb824bb1034832b8ab5f4, type: 3}
-  - {fileID: 21300000, guid: 01f03772adcb045449c6d99684752883, type: 3}
-  - {fileID: 21300000, guid: f0a58fd448757be4f9f7a020380f9bb5, type: 3}
-  scaredFace: {fileID: 21300000, guid: 30ff6ade0b5f2e24db1b51d02bf48803, type: 3}
-  runningFace: {fileID: 21300000, guid: f0a58fd448757be4f9f7a020380f9bb5, type: 3}
+  - {fileID: 21300000, guid: 4122afcb982f3754aaec76375fc4d216, type: 3}
+  - {fileID: 21300000, guid: db1958849c0b6b644a24c62879de55dc, type: 3}
+  - {fileID: 21300000, guid: 11267ef776a9fd54c8d29bf9a3c969dc, type: 3}
+  - {fileID: 21300000, guid: 7cf7d7bdca4a24444b71ea8496e263c7, type: 3}
+  - {fileID: 21300000, guid: fd2e1dfb09e9d13408b829e5c38fa5da, type: 3}
+  scaredFace: {fileID: 21300000, guid: 10803f3550393e443b0f67c2fa03f977, type: 3}
+  runningFace: {fileID: 21300000, guid: e7a231c1ce03f994f9c94451a832890c, type: 3}
+  turtleneckingFace: {fileID: 21300000, guid: 4a7918c4f010dcc4198fcd2b2fea0f29, type: 3}
   runningColor: {r: 0.49803922, g: 0.33333334, b: 0.54901963, a: 1}
   poopColor: {r: 0.3764706, g: 0.23529412, b: 0.11372549, a: 1}
+  turtleneckingColor: {r: 0.54901963, g: 0.28627452, b: 0.2901961, a: 1}
   scaredDuration: 1.5
   scaredFadeDuration: 0.25
   poopFadeDuration: 0.5

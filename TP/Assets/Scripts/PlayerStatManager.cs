@@ -20,10 +20,9 @@ public class PlayerStatManager : MonoBehaviour
 
     [Header("Gameplay")]
     [SerializeField, Range(0.0f, 1.0f), Tooltip("Player's poop level, with 0 being empty, and 1 being turtlenecking")] private float poop;
-    [SerializeField, Range(0.0f, 1.0f), Tooltip("Poop increase per second")] public float poopIncrease;
+    [SerializeField, Range(0.0f, 1.0f), Tooltip("Poop increase per second")] public float walkingPoopSpeed;
    
-    [HideInInspector] public bool isRunning = false;
-    [SerializeField, Range(0.0f, 1.0f), Tooltip("Poop increase per second. Does not stack!")] public float runningPoopIncrease;
+    [SerializeField, Range(0.0f, 1.0f), Tooltip("Poop increase per second. Does not stack!")] public float runningPoopSpeed;
 
     
 
@@ -52,10 +51,11 @@ public class PlayerStatManager : MonoBehaviour
     }
 
     /// <summary>Ticks up the poop according to the increase and delta time </summary>
+    /// <param name="speed">How fast to increase poop by</param>
     /// <returns>Whether or not the poop is full</returns>
-    public float TickPoop()
+    public float TickPoop(float speed)
     {
-        IncreasePoop((isRunning ? runningPoopIncrease : poopIncrease) * Time.deltaTime);
+        IncreasePoop(speed * Time.deltaTime);
         return poop;
     }
 
