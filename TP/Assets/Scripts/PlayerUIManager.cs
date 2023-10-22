@@ -1,6 +1,7 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.Drawing;
 using TMPro;
 using UnityEngine;
 using UnityEngine.Rendering;
@@ -14,6 +15,9 @@ public class PlayerUIManager : MonoBehaviour
     [SerializeField, Tooltip("These should be siblings with the parent of the face, so use the face's parent's parent")] private Transform overlayTransform;
     [SerializeField] private TextMeshProUGUI messenger;
     [SerializeField] private UnityEngine.UI.Image poopSlider;
+    private IEnumerator poopSliderFadeRoutine;
+    [SerializeField] private FadableImage blackscreen;
+    private IEnumerator blackscreenRoutine;
 
 
     [Header("Sprites")]
@@ -21,9 +25,9 @@ public class PlayerUIManager : MonoBehaviour
     [SerializeField, Tooltip("sprite for the scared stage")] private Sprite scaredFace;
     [SerializeField, Tooltip("sprite for running")] private Sprite runningFace;
     [SerializeField, Tooltip("sprite for turtlenecking")] private Sprite turtleneckingFace;
-    [SerializeField, Tooltip("Colour of running bar")] private Color runningColor;
-    [SerializeField, Tooltip("Colour of poop bar")] private Color poopColor;
-    [SerializeField, Tooltip("Colour of turtlenecking bar")] private Color turtleneckingColor;
+    [SerializeField, Tooltip("Colour of running bar")] private UnityEngine.Color runningColor;
+    [SerializeField, Tooltip("Colour of poop bar")] private UnityEngine.Color poopColor;
+    [SerializeField, Tooltip("Colour of turtlenecking bar")] private UnityEngine.Color turtleneckingColor;
 
     [Header("Transitions")]
     [SerializeField, Range(0.0f, 5.0f), Tooltip("How long to display the scared face")] private float scaredDuration = 1.5f;
@@ -37,7 +41,10 @@ public class PlayerUIManager : MonoBehaviour
     {
         poopSlider.color = poopColor;
         //Set the face and the face to the default
-        face.sprite = poopFaces[currentIndex];}
+        face.sprite = poopFaces[currentIndex];
+        blackscreen.FadeOut(scaredFadeDuration);
+    }
+    
 
     public void DisplayMessage(string message)
     {
@@ -103,19 +110,33 @@ public class PlayerUIManager : MonoBehaviour
         } 
     }
 
-    private IEnumerator FadeColor(UnityEngine.UI.Image image, Color startColor, Color color, float duration, float timer)
+    private IEnumerator FadeColor(UnityEngine.UI.Image image, UnityEngine.Color startColor, UnityEngine.Color color, float duration, float timer)
     {
         while (image.color != color)
         {
             timer += Time.deltaTime;
-            image.color = Color.Lerp(startColor, color, timer / duration);
+            image.color = UnityEngine.Color.Lerp(startColor, color, timer / duration);
             yield return null;
         }
     }
 
-    private void FadeBar(Color color, float duration)
+    private void FadeBar(UnityEngine.Color color, float duration)
     {
-        StopAllCoroutines();
-        StartCoroutine(FadeColor(poopSlider, poopSlider.color, color, duration, 0.0f));
+        if (poopSliderFadeRoutine != null)
+        {
+            StopCoroutine(poopSliderFadeRoutine);
+        }
+        poopSliderFadeRoutine = FadeColor(poopSlider, poopSlider.color, color, duration, 0.0f);
+        StartCoroutine(poopSliderFadeRoutine);
+    }
+
+    public void FadeToBlack()
+    {
+        blackscreen.FadeIn(scaredDuration);
+    }
+    
+    public void FadeThroughBlack()
+    {
+        blackscreen.FadeInAndOut(scaredFadeDuration, 0.0f);
     }
 }
