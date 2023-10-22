@@ -23,6 +23,7 @@ public class Toilet : InteractableObject
     {
         Debug.Log("interacted");
         //sit player on toilet
+        
 
         //reset poop bar
         stats.SetPoop(0.0f);
