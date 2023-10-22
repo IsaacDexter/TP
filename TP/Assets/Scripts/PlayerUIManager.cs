@@ -13,10 +13,15 @@ public class PlayerUIManager : MonoBehaviour
     [SerializeField, Tooltip("These should be siblings with the face, so use the face's parent")] private Transform transitionTransform;
     [SerializeField, Tooltip("These should be siblings with the parent of the face, so use the face's parent's parent")] private Transform overlayTransform;
     [SerializeField] private TextMeshProUGUI messenger;
+    [SerializeField] private UnityEngine.UI.Image poopSlider;
+
 
     [Header("Sprites")]
     [SerializeField, Tooltip("List of sprites for the pooping stages")] private List<Sprite> poopFaces;
     [SerializeField, Tooltip("sprite for the scared stage")] private Sprite scaredFace;
+    [SerializeField, Tooltip("sprite for running")] private Sprite runningFace;
+    [SerializeField, Tooltip("Colour of running bar")] private Color runningColor;
+    [SerializeField, Tooltip("Colour of poop bar")] private Color poopColor;
 
     [Header("Transitions")]
     [SerializeField, Range(0.0f, 5.0f), Tooltip("How long to display the scared face")] private float scaredDuration = 1.5f;
@@ -28,6 +33,7 @@ public class PlayerUIManager : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        poopSlider.color = poopColor;
         //Set the face and the face to the default
         face.sprite = poopFaces[currentIndex];}
 
@@ -57,7 +63,19 @@ public class PlayerUIManager : MonoBehaviour
     {
         face.OverlaySprite(scaredFace, scaredFadeDuration, scaredDuration, overlayTransform);
     }
-
+    
+    public void ToggleRunningFace()
+    {
+        face.ToggleOverlaySprite(runningFace, scaredFadeDuration, overlayTransform);
+        if(poopSlider.color == poopColor)
+        {
+            poopSlider.color = runningColor;
+        }
+        else
+        {
+            poopSlider.color = poopColor;
+        }
+    }
 
     public void UpdateFace(float poop)
     {
@@ -66,7 +84,7 @@ public class PlayerUIManager : MonoBehaviour
         //if a change needs to be made
         if (newIndex != currentIndex)
         {
-            currentIndex = newIndex;
+            currentIndex = Math.Min(newIndex, poopFaces.Count - 1);
             //Clone the transition face.
             face.TransitionSprite(poopFaces[currentIndex], poopFadeDuration, transitionTransform);
         } 
