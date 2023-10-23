@@ -444,17 +444,9 @@ PrefabInstance:
     m_TransformParent: {fileID: 5602022006779487123}
     m_Modifications:
     - target: {fileID: 2159674984076703863, guid: ccd3866cef3876c489b7e0a479ffc2fa, type: 3}
-      propertyPath: m_AnchorMax.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2159674984076703863, guid: ccd3866cef3876c489b7e0a479ffc2fa, type: 3}
       propertyPath: m_AnchorMax.y
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 3044801954213316775, guid: ccd3866cef3876c489b7e0a479ffc2fa, type: 3}
-      propertyPath: stats
-      value: 
-      objectReference: {fileID: -2398447930204369094}
     - target: {fileID: 4545483009233073532, guid: ccd3866cef3876c489b7e0a479ffc2fa, type: 3}
       propertyPath: m_AnchorMax.x
       value: 0
@@ -463,30 +455,6 @@ PrefabInstance:
       propertyPath: m_AnchorMax.y
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 4545483009233073532, guid: ccd3866cef3876c489b7e0a479ffc2fa, type: 3}
-      propertyPath: m_SizeDelta.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5938028282409239365, guid: ccd3866cef3876c489b7e0a479ffc2fa, type: 3}
-      propertyPath: poopFaces.Array.data[0]
-      value: 
-      objectReference: {fileID: 21300000, guid: 0c55959dc7da44842a26bf1c15b62e32, type: 3}
-    - target: {fileID: 5938028282409239365, guid: ccd3866cef3876c489b7e0a479ffc2fa, type: 3}
-      propertyPath: poopFaces.Array.data[1]
-      value: 
-      objectReference: {fileID: 21300000, guid: d1aa830de489e61408e5184bc04192d9, type: 3}
-    - target: {fileID: 5938028282409239365, guid: ccd3866cef3876c489b7e0a479ffc2fa, type: 3}
-      propertyPath: poopFaces.Array.data[2]
-      value: 
-      objectReference: {fileID: 21300000, guid: 250ae65c663bb824bb1034832b8ab5f4, type: 3}
-    - target: {fileID: 5938028282409239365, guid: ccd3866cef3876c489b7e0a479ffc2fa, type: 3}
-      propertyPath: poopFaces.Array.data[3]
-      value: 
-      objectReference: {fileID: 21300000, guid: 01f03772adcb045449c6d99684752883, type: 3}
-    - target: {fileID: 5938028282409239365, guid: ccd3866cef3876c489b7e0a479ffc2fa, type: 3}
-      propertyPath: poopFaces.Array.data[4]
-      value: 
-      objectReference: {fileID: 21300000, guid: f0a58fd448757be4f9f7a020380f9bb5, type: 3}
     - target: {fileID: 5962166262416305690, guid: ccd3866cef3876c489b7e0a479ffc2fa, type: 3}
       propertyPath: m_Name
       value: HUD
