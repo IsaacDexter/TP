@@ -207,7 +207,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4747bf3145b25c9429d15f1b55a20710, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  poopIncrease: 0.25
+  poopIncrease: 0.1
   anim: {fileID: 0}
   wallOrFloor: 0
 --- !u!65 &8863719079279721320
