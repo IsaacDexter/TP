@@ -9,6 +9,7 @@ public class Chaser : MonoBehaviour
     private int index = 0;
     [SerializeField, Range(0.0f, 10.0f), Tooltip("The speed of the chaser")] private float speed;
     [SerializeField, Range(0.0f, 1.0f), Tooltip("how much poop to bestow upon the player")] private float poop;
+    private ChaserActivator chaserActivator = null;
     //How far from the waypoint must the chaser be before it's hit it
     private const float sqrDistance = 1.0f;
 
@@ -25,6 +26,7 @@ public class Chaser : MonoBehaviour
         {
             destination = waypoints[0];
         }
+        chaserActivator = GetComponentInParent<ChaserActivator>();
     }
 
     // Update is called once per frame
@@ -49,9 +51,13 @@ public class Chaser : MonoBehaviour
                     destination = null;
                 }
             }
-            
+
             direction = direction.normalized;
             transform.position += Time.deltaTime * speed * direction;
+        }
+        else
+        {
+            chaserActivator.Cleanup();
         }
     }
 
