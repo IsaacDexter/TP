@@ -17,6 +17,8 @@ public class PlayerUIManager : MonoBehaviour
     [SerializeField] private UnityEngine.UI.Image poopSlider;
     private IEnumerator poopSliderFadeRoutine;
     [SerializeField] private FadableImage blackscreen;
+    [SerializeField] private FadableImage gameOverScreen;
+    [SerializeField] private FadableImage hurtScreen;
 
 
     [Header("Sprites")]
@@ -42,6 +44,8 @@ public class PlayerUIManager : MonoBehaviour
         //Set the face and the face to the default
         face.sprite = poopFaces[currentIndex];
         blackscreen.FadeOut(scaredFadeDuration);
+        gameOverScreen.FadeOut(0.0f);
+        hurtScreen.FadeOut(0.0f);
     }
     
 
@@ -141,5 +145,20 @@ public class PlayerUIManager : MonoBehaviour
     public void FadeThroughBlack()
     {
         blackscreen.FadeInAndOut(scaredFadeDuration, 0.0f);
+    }
+
+    public void ShowGameOver()
+    {
+        gameOverScreen.FadeIn(scaredDuration);
+    }
+
+    public void ShowHurtScreen(float fadeDuration)
+    {
+        hurtScreen.FadeIn(fadeDuration);
+    }
+    
+    public void HideHurtScreen()
+    {
+        hurtScreen.FadeOut(scaredDuration);
     }
 }
