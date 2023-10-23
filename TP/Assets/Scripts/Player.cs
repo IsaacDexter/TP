@@ -28,6 +28,8 @@ public class Player : MonoBehaviour
     {
         stateMachine = new StateMachine(this);
         stateMachine.SetState(new WalkState());
+
+        ui.DisplayMessage("Damn. Really gotta poop...", 5);
     }
 
     // Update is called once per frame

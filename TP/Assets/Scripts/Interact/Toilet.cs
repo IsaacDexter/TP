@@ -33,7 +33,7 @@ public class Toilet : InteractableObject
 
         //list stats and increases 
         ui.ClearMessage();
-        ui.DisplayMessage(stats.GetStatIncreases());
+        ui.DisplayMessage(stats.GetStatIncreases(), 6.5f);
         return true;
     }
 
