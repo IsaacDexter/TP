@@ -22993,6 +22993,17 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f8ff076179284dc4cb4207c5cfd21185, type: 3}
+--- !u!114 &660923742 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 8635487331768247510, guid: f8ff076179284dc4cb4207c5cfd21185, type: 3}
+  m_PrefabInstance: {fileID: 660923741}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8b9a305e18de0c04dbd257a21cd47087, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &696314264
 GameObject:
   m_ObjectHideFlags: 0
@@ -51973,6 +51984,10 @@ PrefabInstance:
       propertyPath: m_SizeDelta.x
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2288154446108943756, guid: 5242788bda3046145add285c13529875, type: 3}
+      propertyPath: postVol
+      value: 
+      objectReference: {fileID: 660923742}
     - target: {fileID: 3121150816857653412, guid: 5242788bda3046145add285c13529875, type: 3}
       propertyPath: m_Name
       value: Player
