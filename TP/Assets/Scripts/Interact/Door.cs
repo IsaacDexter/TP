@@ -1,18 +1,21 @@
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting.Antlr3.Runtime.Misc;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
 public class Door : InteractableObject
 {
     [SerializeField] private GameObject teleportLocation;
+    [SerializeField] private AudioSource openSource;
+    [SerializeField] private AudioSource closedSource;
+    [SerializeField] private string lockedPrompt = "It's locked...";
 
     private Player player = null;
     private IEnumerator delayedTask;
 
     private void Start()
     {
-
     }
 
     override public bool Interact(Interact interact)
@@ -25,6 +28,7 @@ public class Door : InteractableObject
             if (teleportLocation != null)
             {
                 player.Blink();
+                openSource.Play();
 
                 //teleport the player to that somewhere
                 Teleport(player.ui.scaredFadeDuration);
@@ -34,6 +38,8 @@ public class Door : InteractableObject
             //If the door leads nowhere
             else
             {
+                closedSource.Play();
+                player.ui.DisplayMessage(lockedPrompt, 1.0f);
                 //It's locked
                 return false;            
             }
@@ -52,8 +58,12 @@ public class Door : InteractableObject
 
     private void Teleport(float delay)
     {
+        if (player.stats.PlayerUsedToilet)
+        {
+            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1); //if player used toilet, door takes them to next level
+        }
         //Prevent double teleport
-        if(delayedTask == null)
+        if (delayedTask == null)
         {
             delayedTask = TeleportAfterDelay(delay);
             StartCoroutine(delayedTask);

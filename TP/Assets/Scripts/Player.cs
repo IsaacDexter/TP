@@ -43,6 +43,6 @@ public class Player : MonoBehaviour
 
     public void GameOver()
     {
-        ui.FadeToBlack();
+        ui.ShowGameOver();
     }
 }

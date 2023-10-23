@@ -235,6 +235,7 @@ MonoBehaviour:
   poop: 0
   walkingPoopSpeed: 0.008
   runningPoopSpeed: 0.04
+  PlayerUsedToilet: 0
 --- !u!1 &3759465962314104735
 GameObject:
   m_ObjectHideFlags: 0
