@@ -6,6 +6,9 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
+    path: Assets/Scenes/FixedGameLevels/SplashStart.unity
+    guid: f6b2977d3d8b9644aaf46b481d6de860
+  - enabled: 1
     path: Assets/Scenes/FixedGameLevels/Level 1.unity
     guid: 780f54ca1aec3444e9e335f61cd7a083
   - enabled: 1
