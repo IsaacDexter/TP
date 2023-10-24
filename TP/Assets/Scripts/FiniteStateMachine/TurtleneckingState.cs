@@ -20,7 +20,8 @@ public class TurtleneckingState : State
     {
         agent.lines.PlayTurtleneckingLine();
         agent.ui.ShowHurtScreen(mashTimer);
-        agent.ui.DisplayMessage(MashMessage);
+        agent.ui.ShowMashImg(mashTimer);
+        //agent.ui.DisplayMessage(MashMessage);
         agent.ui.ShowTurtleneckingFace();
         MashCounter = Random.Range(MashCounter-5, MashCounter+5);
     }
@@ -29,6 +30,7 @@ public class TurtleneckingState : State
         agent.ui.ClearMessage(MashMessage);
         agent.ui.HideTurtleneckingFace();
         agent.ui.HideHurtScreen();
+        agent.ui.HideMashImg();
         agent.stats.DecreasePoop(agent.lives * 0.25f); //decrease poop by amount based on lives. 50% first time, then 25% 
         agent.lives--;
     }
