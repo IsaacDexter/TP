@@ -10,6 +10,7 @@ public class Door : InteractableObject
     [SerializeField] private AudioSource openSource;
     [SerializeField] private AudioSource closedSource;
     [SerializeField] private string lockedPrompt = "It's locked...";
+    [SerializeField, Tooltip("If the door can be opened")] public bool locked = false;
 
     private Player player = null;
     private IEnumerator delayedTask;
@@ -25,7 +26,7 @@ public class Door : InteractableObject
         if (player != null)
         {
             //And the door Leads somewhere
-            if (teleportLocation != null)
+            if (teleportLocation != null && !locked)
             {
                 player.Blink();
                 openSource.Play();
