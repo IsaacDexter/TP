@@ -11472,6 +11472,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Teen1FlipUp
       objectReference: {fileID: 0}
+    - target: {fileID: 7018368877339309397, guid: 2c00becf65262ce4f90b66ae28818588, type: 3}
+      propertyPath: poopIncrease
+      value: 0.07
+      objectReference: {fileID: 0}
     - target: {fileID: 8216790530723529849, guid: 2c00becf65262ce4f90b66ae28818588, type: 3}
       propertyPath: m_Sprite
       value: 
@@ -33655,6 +33659,17 @@ Mesh:
     offset: 0
     size: 0
     path: 
+--- !u!114 &840631013 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 9200713832729557116, guid: da852cb53a080a24185daecbd8d252af, type: 3}
+  m_PrefabInstance: {fileID: 1990791004}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8b9a305e18de0c04dbd257a21cd47087, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!43 &854329508
 Mesh:
   m_ObjectHideFlags: 0
@@ -54988,6 +55003,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3556803748854818438, guid: 8672468284969864195bc4d5a5e118fc, type: 3}
+      propertyPath: poopIncrease
+      value: 0.07
+      objectReference: {fileID: 0}
     - target: {fileID: 4136809508272562578, guid: 8672468284969864195bc4d5a5e118fc, type: 3}
       propertyPath: m_Sprite
       value: 
@@ -63363,6 +63382,14 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: -2398447930204369094, guid: 5242788bda3046145add285c13529875, type: 3}
+      propertyPath: runningPoopSpeed
+      value: 0.02
+      objectReference: {fileID: 0}
+    - target: {fileID: -2398447930204369094, guid: 5242788bda3046145add285c13529875, type: 3}
+      propertyPath: walkingPoopSpeed
+      value: 0.004
+      objectReference: {fileID: 0}
     - target: {fileID: 1426898502039395761, guid: 5242788bda3046145add285c13529875, type: 3}
       propertyPath: m_AnchorMax.x
       value: 0
@@ -63375,6 +63402,10 @@ PrefabInstance:
       propertyPath: m_SizeDelta.x
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2853817442212687863, guid: 5242788bda3046145add285c13529875, type: 3}
+      propertyPath: postVol
+      value: 
+      objectReference: {fileID: 840631013}
     - target: {fileID: 3121150816857653412, guid: 5242788bda3046145add285c13529875, type: 3}
       propertyPath: m_Name
       value: Player
@@ -63407,6 +63438,14 @@ PrefabInstance:
       propertyPath: backgroundMusic
       value: 
       objectReference: {fileID: 926227037}
+    - target: {fileID: 5423972207001703821, guid: 5242788bda3046145add285c13529875, type: 3}
+      propertyPath: backgroundMusicVolume
+      value: 0.3
+      objectReference: {fileID: 0}
+    - target: {fileID: 5423972207001703821, guid: 5242788bda3046145add285c13529875, type: 3}
+      propertyPath: backgroundMusicAttenuatedVolume
+      value: 0.15
+      objectReference: {fileID: 0}
     - target: {fileID: 5602022006779487123, guid: 5242788bda3046145add285c13529875, type: 3}
       propertyPath: m_LocalPosition.x
       value: -8.25
@@ -63450,6 +63489,10 @@ PrefabInstance:
     - target: {fileID: 6381621805778004196, guid: 5242788bda3046145add285c13529875, type: 3}
       propertyPath: m_AnchorMax.y
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8483846825193621018, guid: 5242788bda3046145add285c13529875, type: 3}
+      propertyPath: MaxDistance
+      value: 511.24475
       objectReference: {fileID: 0}
     - target: {fileID: 8826047545656583663, guid: 5242788bda3046145add285c13529875, type: 3}
       propertyPath: m_AnchorMax.x
