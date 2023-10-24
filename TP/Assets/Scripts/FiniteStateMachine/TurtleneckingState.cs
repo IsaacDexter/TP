@@ -18,6 +18,7 @@ public class TurtleneckingState : State
 
     public override void Enter(Player agent)
     {
+        agent.lines.PlayTurtleneckingLine();
         agent.ui.ShowHurtScreen(mashTimer);
         agent.ui.DisplayMessage(MashMessage);
         agent.ui.ShowTurtleneckingFace();

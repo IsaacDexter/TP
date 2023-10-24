@@ -69,6 +69,7 @@ public class Chaser : MonoBehaviour
             Player player = other.GetComponentInParent<Player>();
             player.Scare(poop);
             audioSource.Play();
+            chaserActivator.Cleanup();
         }
     }
 }

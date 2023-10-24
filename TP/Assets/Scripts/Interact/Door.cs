@@ -9,6 +9,7 @@ public class Door : InteractableObject
     [SerializeField] private GameObject teleportLocation;
     [SerializeField] private AudioSource openSource;
     [SerializeField] private AudioSource closedSource;
+    [SerializeField] private AudioClip lockedLine;
     [SerializeField] private string lockedPrompt = "It's locked...";
     [SerializeField, Tooltip("If the door can be opened")] public bool locked = false;
 
@@ -41,6 +42,7 @@ public class Door : InteractableObject
             {
                 closedSource.Play();
                 player.ui.DisplayMessage(lockedPrompt, 1.0f);
+                player.lines.PlaySound(lockedLine);
                 //It's locked
                 return false;            
             }

@@ -309,7 +309,9 @@ MonoBehaviour:
   teleportLocation: {fileID: 0}
   openSource: {fileID: 5757702716141278476}
   closedSource: {fileID: 378142764000037624}
+  lockedLine: {fileID: 8300000, guid: 6271cce07a85c014e8e1641d9c456123, type: 3}
   lockedPrompt: It's locked...
+  locked: 0
 --- !u!1 &6746953151401353007
 GameObject:
   m_ObjectHideFlags: 0
