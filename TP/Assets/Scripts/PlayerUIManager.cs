@@ -141,6 +141,10 @@ public class PlayerUIManager : MonoBehaviour
     {
         blackscreen.FadeIn(scaredDuration);
     }
+    public void FadeToBlack(float duration)
+    {
+        blackscreen.FadeIn(duration);
+    }
     
     public void FadeThroughBlack()
     {
