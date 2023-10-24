@@ -51988,6 +51988,10 @@ PrefabInstance:
       propertyPath: postVol
       value: 
       objectReference: {fileID: 660923742}
+    - target: {fileID: 2853817442212687863, guid: 5242788bda3046145add285c13529875, type: 3}
+      propertyPath: postVol
+      value: 
+      objectReference: {fileID: 660923742}
     - target: {fileID: 3121150816857653412, guid: 5242788bda3046145add285c13529875, type: 3}
       propertyPath: m_Name
       value: Player
