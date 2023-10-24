@@ -9,6 +9,7 @@ public class Player : MonoBehaviour
     public PlayerStatManager stats;
     public PlayerUIManager ui;
     public FirstPersonController controller;
+    public PlayerLineManager lines;
 
     public StateMachine stateMachine;
 
