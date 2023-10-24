@@ -59807,6 +59807,14 @@ PrefabInstance:
       propertyPath: m_SizeDelta.x
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1657529787276678102, guid: 5242788bda3046145add285c13529875, type: 3}
+      propertyPath: test
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 1657529787276678102, guid: 5242788bda3046145add285c13529875, type: 3}
+      propertyPath: MashImg
+      value: 
+      objectReference: {fileID: 0}
     - target: {fileID: 2288154446108943756, guid: 5242788bda3046145add285c13529875, type: 3}
       propertyPath: postVol
       value: 

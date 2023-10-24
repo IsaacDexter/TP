@@ -19,6 +19,7 @@ public class PlayerUIManager : MonoBehaviour
     [SerializeField] private FadableImage blackscreen;
     [SerializeField] private FadableImage gameOverScreen;
     [SerializeField] private FadableImage hurtScreen;
+    [SerializeField] private FadableImage MashImg;
 
 
     [Header("Sprites")]
@@ -46,9 +47,8 @@ public class PlayerUIManager : MonoBehaviour
         blackscreen.FadeOut(scaredFadeDuration);
         gameOverScreen.FadeOut(0.0f);
         hurtScreen.FadeOut(0.0f);
+        MashImg.FadeOut(0.0f);
     }
-    
-
     public void DisplayMessage(string message)
     {
         messenger.SetText(message);
@@ -160,5 +160,15 @@ public class PlayerUIManager : MonoBehaviour
     public void HideHurtScreen()
     {
         hurtScreen.FadeOut(scaredDuration);
+    }
+
+    public void ShowMashImg(float fadeDuration)
+    {
+        MashImg.FadeIn(fadeDuration);
+    }
+
+    public void HideMashImg()
+    {
+        MashImg.FadeOut(scaredFadeDuration);
     }
 }
