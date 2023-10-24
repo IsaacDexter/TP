@@ -1,7 +1,5 @@
-using System;
 using System.Collections;
 using System.Collections.Generic;
-using Unity.Mathematics;
 using UnityEngine;
 using UnityEngine.UIElements;
 
@@ -11,10 +9,8 @@ public class Player : MonoBehaviour
     public PlayerStatManager stats;
     public PlayerUIManager ui;
     public FirstPersonController controller;
-    public PlayerLineManager lines;
 
     public StateMachine stateMachine;
-
 
     /// <summary>The amount of lives the player has to survive button mashing</summary>
     public int lives { get; set; } = 2;
@@ -32,7 +28,8 @@ public class Player : MonoBehaviour
     {
         stateMachine = new StateMachine(this);
         stateMachine.SetState(new WalkState());
-        
+
+        ui.DisplayMessage("Damn. Gotta poop...", 3.0f);
     }
 
     // Update is called once per frame
@@ -50,6 +47,4 @@ public class Player : MonoBehaviour
     {
         ui.ShowGameOver();
     }
-
-    
 }
