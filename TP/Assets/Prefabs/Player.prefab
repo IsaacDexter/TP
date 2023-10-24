@@ -322,7 +322,7 @@ AudioSource:
   Priority: 128
   DopplerLevel: 1
   MinDistance: 1
-  MaxDistance: 500
+  MaxDistance: 511.24475
   Pan2D: 0
   rolloffMode: 0
   BypassEffects: 0
@@ -410,8 +410,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   backgroundMusic: {fileID: 0}
-  backgroundMusicVolume: 0.4
-  backgroundMusicAttenuatedVolume: 0.2
+  backgroundMusicVolume: 0.3
+  backgroundMusicAttenuatedVolume: 0.15
   turtleneckingLines:
   - {fileID: 8300000, guid: e2dcffd61963178448a6fe5afa480f39, type: 3}
   - {fileID: 8300000, guid: 658ac138380c19d4aa6839b073ce7c39, type: 3}
