@@ -8,6 +8,8 @@ public class Toilet : InteractableObject
     private PlayerStatManager stats;
     private PlayerUIManager ui;
 
+    private bool interacted = false;
+
     private AudioSource flushSFX;
 
     // Start is called before the first frame update
@@ -21,20 +23,24 @@ public class Toilet : InteractableObject
 
     override public bool Interact(Interact interact)
     {
-        Debug.Log("interacted");
-        stats.PlayerUsedToilet = true;
-        //sit player on toilet
-        
-        //reset poop bar
-        stats.SetPoop(0.0f);
+        if (!interacted)
+        {
+            interacted = true;
+            Debug.Log("interacted");
+            stats.PlayerUsedToilet = true;
+            //sit player on toilet
 
-        //play flush sfx
-        flushSFX.Play();
+            //reset poop bar
+            stats.SetPoop(0.0f);
 
-        //list stats and increases 
-        ui.ClearMessage();
-        ui.DisplayMessage(stats.GetStatIncreases(), 6.0f);
-        return true;
+            //play flush sfx
+            flushSFX.Play();
+
+            //list stats and increases 
+            ui.ClearMessage();
+            ui.DisplayMessage(stats.GetStatIncreases(), 6.0f);
+        }
+        return interacted;
     }
 
     public void OnTriggerEnter(Collider other)
