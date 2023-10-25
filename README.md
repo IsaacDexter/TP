@@ -1,23 +1,6 @@
 # TP
-TP, a project for Scream Jam 2023
+TP, out entry for [Scream Jam 2023](https://itch.io/jam/scream-jam-2023)
 
-By Ayk Perera, Bonita Woralert, Isaac Dexter
+By [Ayk Perera](https://github.com/ImAykie), [Bonita Woralert](https://github.com/BonitaWoralert), [Isaac Dexter](https://github.com/IsaacDexter)
 
-Credits:
-
-Audio:
-
-"Toilet Flush, European, Distant, Lid Up.wav" by InspectorJ (www.jshaw.co.uk) of Freesound.org
-
-https://freesound.org/people/SirBedlam/ For jumpscare sounds
-
-Horror ambience 10.wav Recorded, edited and composed by klankbeeld.
-https://freesound.org/people/klankbeeld/sounds/133100/
-
-Film_static_03.wav by: https://freesound.org/people/joedeshon/
-
-wood on mattress 001.wav by : https://freesound.org/people/klankbeeld/
-
-Textures: 
-https://ambientcg.com/ - CC0 textures
-
+For more information, visit the [itch.io page](https://bonitaworalert.itch.io/tp)
