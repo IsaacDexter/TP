@@ -40,6 +40,8 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3816715437212704931}
+  - component: {fileID: 6474735284550244751}
+  - component: {fileID: 1194782547505503518}
   m_Layer: 0
   m_Name: doorInteract
   m_TagString: Untagged
@@ -64,6 +66,46 @@ Transform:
   - {fileID: 3422057602220328092}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &6474735284550244751
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4592654414784789017}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ed74f18d69d1b63409529af87ea1894c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  InteractionPrompt: Press E to Open Door
+  teleportLocation: {fileID: 0}
+  openSource: {fileID: 0}
+  closedSource: {fileID: 0}
+  lockedLine: {fileID: 0}
+  lockedPrompt: It's locked...
+  locked: 0
+--- !u!65 &1194782547505503518
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4592654414784789017}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 1
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 0.25, y: 0.012567715, z: 0.025717786}
+  m_Center: {x: -0.12, y: 5.2364636e-18, z: -0.0071411068}
 --- !u!1 &8489817598994554058
 GameObject:
   m_ObjectHideFlags: 0
@@ -76,8 +118,6 @@ GameObject:
   - component: {fileID: 3040643910222483993}
   - component: {fileID: 4609411332352883355}
   - component: {fileID: 2906079792469551799}
-  - component: {fileID: 4234906049134187890}
-  - component: {fileID: 3833175849787575553}
   m_Layer: 6
   m_Name: Door.001
   m_TagString: Untagged
@@ -172,43 +212,3 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: 3459603051315571903, guid: 7e642aca5add40e458b159a245d65a9c, type: 3}
---- !u!114 &4234906049134187890
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8489817598994554058}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ed74f18d69d1b63409529af87ea1894c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  InteractionPrompt: Press E to Open Door
-  teleportLocation: {fileID: 0}
-  openSource: {fileID: 0}
-  closedSource: {fileID: 0}
-  lockedLine: {fileID: 0}
-  lockedPrompt: It's locked...
-  locked: 0
---- !u!65 &3833175849787575553
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8489817598994554058}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 1
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Size: {x: 0.25, y: 0.012567715, z: 0.025717786}
-  m_Center: {x: -0.12, y: 5.2364636e-18, z: -0.0071411068}
