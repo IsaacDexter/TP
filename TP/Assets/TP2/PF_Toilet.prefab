@@ -220,7 +220,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 5278426092680902147}
-  m_LocalEulerAnglesHint: {x: -90, y: -0.00000006649359, z: 0}
+  m_LocalEulerAnglesHint: {x: -89.44609, y: -90.00158, z: 90.00158}
 --- !u!33 &169072230785076474
 MeshFilter:
   m_ObjectHideFlags: 0
