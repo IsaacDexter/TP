@@ -105,7 +105,9 @@ PrefabInstance:
       value: Coffin
       objectReference: {fileID: 0}
     m_RemovedComponents: []
-    m_RemovedGameObjects: []
+    m_RemovedGameObjects:
+    - {fileID: -8700617353114198275, guid: 82092dde18a054543a30aaca5aa36d04, type: 3}
+    - {fileID: 65702495048144492, guid: 82092dde18a054543a30aaca5aa36d04, type: 3}
     m_AddedGameObjects: []
     m_AddedComponents:
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 82092dde18a054543a30aaca5aa36d04, type: 3}
