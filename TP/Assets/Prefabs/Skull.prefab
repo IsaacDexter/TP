@@ -95,7 +95,7 @@ PrefabInstance:
     - target: {fileID: -7511558181221131132, guid: 1947760aec085e54db1e38299097eefc, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: f4259fc74cd658845ae4238570d58290, type: 2}
+      objectReference: {fileID: 2100000, guid: fe39ecc92b32296419ef5ac727cd68ac, type: 2}
     - target: {fileID: 919132149155446097, guid: 1947760aec085e54db1e38299097eefc, type: 3}
       propertyPath: m_Name
       value: SkullModel
