@@ -53,8 +53,8 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
+  m_Size: {x: 4.109736, y: 2.7913454, z: 3.7364805}
+  m_Center: {x: -0.62656, y: -0.8956727, z: -0.4936055}
 --- !u!114 &1050551139769786928
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -70,7 +70,6 @@ MonoBehaviour:
   furniture: {fileID: 1996688362704830656}
   force: {x: 0, y: 0, z: 0}
   position: {fileID: 1999090074459278430}
-  poop: 0
 --- !u!1001 &1995201630682266052
 PrefabInstance:
   m_ObjectHideFlags: 0
