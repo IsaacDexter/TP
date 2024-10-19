@@ -8,7 +8,6 @@ public class FallingFurniture : MonoBehaviour
     [SerializeField, Tooltip("The object to make fall. It must have a rigidbody, and an audiosource")] protected GameObject furniture;
     [SerializeField, Tooltip("What force to apply on the object")] protected Vector3 force = Vector3.zero;
     [SerializeField, Tooltip("Where to apply the force on the object")] protected Transform position;
-    [SerializeField, Tooltip("How much to scare the player by (if at all)")] protected float poop = 0.0f;
     protected Rigidbody furnitureRigidbody;
     protected AudioSource furnitureAudioSource;
     void Start()
@@ -22,7 +21,6 @@ public class FallingFurniture : MonoBehaviour
         if (other.gameObject.name == "Player")
         {
             Fall();
-            Scare(other.GetComponentInParent<Player>());
             GetComponent<BoxCollider>().enabled = false;
         }
     }
@@ -33,13 +31,5 @@ public class FallingFurniture : MonoBehaviour
         
         furnitureRigidbody.AddRelativeForce(force);
         furnitureAudioSource.Play();
-    }
-
-    protected virtual void Scare(Player player)
-    {
-        if (poop > 0.0f)
-        {
-            player.Scare(poop);
-        }
     }
 }
