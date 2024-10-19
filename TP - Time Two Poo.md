@@ -36,6 +36,7 @@
 	- anim goes from big central -> corner ui
 - brown decal @ death loc + VA
 	- prefab this 
+- player pass out
 
 ## Room Ideas
 - sewer lvl
