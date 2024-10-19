@@ -321,10 +321,8 @@ GameObject:
   - component: {fileID: 7989239810684601012}
   - component: {fileID: 7966674224700173497}
   - component: {fileID: 5111126154129854049}
-  - component: {fileID: -2398447930204369094}
   - component: {fileID: 8483846825193621018}
   - component: {fileID: 5423972207001703821}
-  - component: {fileID: 2853817442212687863}
   m_Layer: 7
   m_Name: Player
   m_TagString: Player
@@ -388,8 +386,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   playerCamera: {fileID: 3199454274844679069}
   walkSpeed: 3.5
-  runSpeed: 7
-  runCost: 12
   jumpPower: 5
   gravity: 10
   lookSpeed: 2
@@ -425,34 +421,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e34623f4e6008f6468bbcde8d3900858, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  stats: {fileID: -2398447930204369094}
   ui: {fileID: 1657529787276678102}
   controller: {fileID: 7989239810684601012}
   lines: {fileID: 5423972207001703821}
---- !u!114 &-2398447930204369094
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3121150816857653412}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5fb6dee033fc7f145bcf3561dbf40d6a, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  sphincterDiameter: 0.25
-  sphincterDiameterMultiplier: 1
-  smallIntestineLength: 700
-  smallIntestineWidth: 2.5
-  colonVolume: 200
-  logsPerMinute: 1
-  solidity: 0.7
-  stinkyness: 0.2
-  poop: 0
-  walkingPoopSpeed: 0.008
-  runningPoopSpeed: 0.04
-  PlayerUsedToilet: 0
 --- !u!82 &8483846825193621018
 AudioSource:
   m_ObjectHideFlags: 0
@@ -571,20 +542,6 @@ MonoBehaviour:
   - {fileID: 8300000, guid: 06e4a05e0c32e3747a96bcf4666691ee, type: 3}
   - {fileID: 8300000, guid: 0c9b8259d20b3b74692eae469a4b276e, type: 3}
   - {fileID: 8300000, guid: 2b11e3a556dc4a143927a7dba9807c7c, type: 3}
---- !u!114 &2853817442212687863
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3121150816857653412}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b79fad1dddfbdea47aa3921e09b9a74f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  postVol: {fileID: 0}
-  stats: {fileID: -2398447930204369094}
 --- !u!1 &6550822038047768291
 GameObject:
   m_ObjectHideFlags: 0
@@ -624,6 +581,22 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 4009899700561740548}
     m_Modifications:
+    - target: {fileID: 2993836360854220, guid: ccd3866cef3876c489b7e0a479ffc2fa, type: 3}
+      propertyPath: m_fontAsset
+      value: 
+      objectReference: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+    - target: {fileID: 2993836360854220, guid: ccd3866cef3876c489b7e0a479ffc2fa, type: 3}
+      propertyPath: m_sharedMaterial
+      value: 
+      objectReference: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+    - target: {fileID: 1338034105112562679, guid: ccd3866cef3876c489b7e0a479ffc2fa, type: 3}
+      propertyPath: m_fontAsset
+      value: 
+      objectReference: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+    - target: {fileID: 1338034105112562679, guid: ccd3866cef3876c489b7e0a479ffc2fa, type: 3}
+      propertyPath: m_sharedMaterial
+      value: 
+      objectReference: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
     - target: {fileID: 2159674984076703863, guid: ccd3866cef3876c489b7e0a479ffc2fa, type: 3}
       propertyPath: m_AnchorMax.y
       value: 0
