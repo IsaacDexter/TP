@@ -29,11 +29,11 @@ public class Door : InteractableObject
             //And the door Leads somewhere
             if (teleportLocation != null && !locked)
             {
-                player.Blink();
+                player.ui.FadeThroughBlack();
                 openSource.Play();
 
                 //teleport the player to that somewhere
-                Teleport(player.ui.scaredFadeDuration);
+                Teleport();
 
                 return true;
             }
@@ -51,27 +51,9 @@ public class Door : InteractableObject
         return false;
     }
 
-    private IEnumerator TeleportAfterDelay(float delay)
+    private void Teleport()
     {
-        yield return new WaitForSeconds(delay);
-
         player.transform.position = teleportLocation.transform.position;
-        delayedTask = null;
-    }
-
-    private void Teleport(float delay)
-    {
-        if (player.stats.PlayerUsedToilet)
-        {
-            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1); //if player used toilet, door takes them to next level
-        }
-        //Prevent double teleport
-        if (delayedTask == null)
-        {
-            delayedTask = TeleportAfterDelay(delay);
-            StartCoroutine(delayedTask);
-        }
-
     }
 
     public void OnTriggerEnter(Collider other)

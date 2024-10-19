@@ -28,10 +28,13 @@ Transform:
   m_GameObject: {fileID: 993097240934384961}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalPosition: {x: 0, y: 0.5, z: 0}
+  m_LocalScale: {x: 0.5, y: 0.5, z: 0.5}
   m_ConstrainProportionsScale: 0
-  m_Children: []
+  m_Children:
+  - {fileID: 1205594674215027976}
+  - {fileID: 4812512624195393020}
+  - {fileID: 4086699018321831258}
   m_Father: {fileID: 5602022006779487123}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!33 &607034240194017453
@@ -140,7 +143,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 5602022006779487123}
+  m_Father: {fileID: 4009899700561740548}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!20 &3199454274844679069
 Camera:
@@ -338,13 +341,10 @@ Transform:
   m_GameObject: {fileID: 3121150816857653412}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -21.6, y: -3, z: -0.4000001}
-  m_LocalScale: {x: 0.5, y: 0.5, z: 0.5}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
-  - {fileID: 1205594674215027976}
-  - {fileID: 4812512624195393020}
-  - {fileID: 4086699018321831258}
   - {fileID: 4009899700561740548}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -367,13 +367,13 @@ CharacterController:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Height: 2
-  m_Radius: 0.5
+  m_Height: 1
+  m_Radius: 0.25
   m_SlopeLimit: 45
   m_StepOffset: 0.3
   m_SkinWidth: 0.08
   m_MinMoveDistance: 0.001
-  m_Center: {x: 0, y: 0, z: 0}
+  m_Center: {x: 0, y: 0.5, z: 0}
 --- !u!114 &7989239810684601012
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -390,7 +390,7 @@ MonoBehaviour:
   walkSpeed: 3.5
   runSpeed: 7
   runCost: 12
-  jumpPower: 0
+  jumpPower: 5
   gravity: 10
   lookSpeed: 2
   lookXLimit: 45
@@ -473,7 +473,7 @@ AudioSource:
   SpatializePostEffects: 0
   Priority: 128
   DopplerLevel: 1
-  MinDistance: 1
+  MinDistance: 0.25
   MaxDistance: 511.24475
   Pan2D: 0
   rolloffMode: 0
@@ -609,12 +609,12 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6550822038047768291}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0.8}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 5602022006779487123}
+  m_Father: {fileID: 4009899700561740548}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &5001431881757528211
 PrefabInstance:
@@ -622,7 +622,7 @@ PrefabInstance:
   serializedVersion: 2
   m_Modification:
     serializedVersion: 3
-    m_TransformParent: {fileID: 5602022006779487123}
+    m_TransformParent: {fileID: 4009899700561740548}
     m_Modifications:
     - target: {fileID: 2159674984076703863, guid: ccd3866cef3876c489b7e0a479ffc2fa, type: 3}
       propertyPath: m_AnchorMax.y
@@ -674,15 +674,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 9069819563905529289, guid: ccd3866cef3876c489b7e0a479ffc2fa, type: 3}
       propertyPath: m_LocalRotation.x
-      value: 0
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: 9069819563905529289, guid: ccd3866cef3876c489b7e0a479ffc2fa, type: 3}
       propertyPath: m_LocalRotation.y
-      value: 0
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: 9069819563905529289, guid: ccd3866cef3876c489b7e0a479ffc2fa, type: 3}
       propertyPath: m_LocalRotation.z
-      value: 0
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: 9069819563905529289, guid: ccd3866cef3876c489b7e0a479ffc2fa, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x

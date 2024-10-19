@@ -5,7 +5,6 @@ using UnityEngine;
 
 public class JumpscareStandee : MonoBehaviour
 {
-    [SerializeField, Range(0.0f, 1.0f), Tooltip("The amount of poop to increase the scaree by.")] private float poopIncrease = 0.0f;
     private AudioSource scareSound;
     [SerializeField] private Animator anim;
     [SerializeField, Tooltip("False for wall, true for floor")] bool wallOrFloor;
@@ -32,7 +31,7 @@ public class JumpscareStandee : MonoBehaviour
             }
 
             Player player = other.GetComponentInParent<Player>();
-            player.Scare(poopIncrease);
+            player.Scare();
             scareSound.Play();
         }
         GetComponent<Collider>().enabled = false;

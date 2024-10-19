@@ -21,7 +21,7 @@ public class ToggleObjects : MonoBehaviour
         {
             foreach (GameObject gameObject in objectsToToggle)
             {
-                gameObject.SetActive(!startActive);
+                gameObject.SetActive(!gameObject.activeSelf);
             }
         }
     }
