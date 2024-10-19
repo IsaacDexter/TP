@@ -12,11 +12,14 @@ public class Lightning : MonoBehaviour
     private float m_maxInterval;
     [SerializeField, Range(0.0f, 30.0f)] 
     private float m_duration;
+    [SerializeField, Range(0.0f, 5.0f)] 
+    private float m_intensity;
 
     [SerializeField] 
     protected AudioSource m_audioSource;
     [SerializeField] 
     private List<AudioClip> m_lightningClips;
+
 
 
     // Start is called before the first frame update
@@ -34,7 +37,7 @@ public class Lightning : MonoBehaviour
 
             foreach (Light light in m_lights)
             {
-                light.intensity = 5.0f;
+                light.intensity = m_intensity;
             }
 
             int clipIndex = Random.Range(0, m_lightningClips.Count);
