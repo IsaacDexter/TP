@@ -5,6 +5,7 @@ using UnityEngine;
 public class ToiletMonster : MonoBehaviour
 {
     private Animator animator;
+    private AudioSource audioSource;
 
     // Start is called before the first frame update
     void Start()
@@ -15,9 +16,22 @@ public class ToiletMonster : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (PlayerPrefs.GetInt("ToiletRoll") == 2)
+    }
+
+    public void PlayClip(AudioClip clip)
+    {
+        audioSource.clip = clip;
+        audioSource.Play();
+        StartCoroutine(WaitForSound(audioSource));
+    }
+
+    private IEnumerator WaitForSound(AudioSource source)
+    {
+        while (source.isPlaying)
         {
-            animator.Play("lidAction");
+            animator.SetTrigger("StartLidMovement");
+            yield return null;
         }
+        animator.SetTrigger("StopLidMovement");
     }
 }

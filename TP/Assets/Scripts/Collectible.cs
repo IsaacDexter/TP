@@ -12,7 +12,6 @@ public class Collectible : MonoBehaviour
     {
         if (other.CompareTag("Player"))
         {
-            //increment collectible
             if(!PlayerPrefs.HasKey(CollectibleName))
             {
                 PlayerPrefs.SetInt(CollectibleName, 1);
@@ -27,7 +26,7 @@ public class Collectible : MonoBehaviour
                 AudioSource.Play();
                 StartCoroutine(WaitForSound(AudioSource));
             }
-            Object.Destroy(this);
+            Object.Destroy(gameObject);
         }
     }
     private IEnumerator WaitForSound(AudioSource source)
