@@ -285,6 +285,7 @@ GameObject:
   - component: {fileID: 7225101761080874852}
   - component: {fileID: 872487548979619326}
   - component: {fileID: 4914844637734613477}
+  - component: {fileID: 941016151780864782}
   m_Layer: 7
   m_Name: Player
   m_TagString: Player
@@ -554,7 +555,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   clips:
-  - {fileID: 8300000, guid: b98d6992ab9e9404d8cf1bea245fffd3, type: 3}
+  - {fileID: 8300000, guid: 2d40e98ce4acc984aa6603feec2b07b3, type: 3}
+  - {fileID: 8300000, guid: bcd3b976b79992846ade7ff8eb799ce5, type: 3}
+  - {fileID: 8300000, guid: 0418c37444f244b459278f6b38b2b061, type: 3}
+  - {fileID: 8300000, guid: 5a9c17516041a954282baad4e1e2c004, type: 3}
+  - {fileID: 8300000, guid: 878c9c06e8a4f4843a1f8cf795b782d9, type: 3}
   material: {fileID: 13400000, guid: 2c752ac768b8f7b4d9304cb0cff0df66, type: 2}
   pitchVariationRange: 0.2
   pitch: 1
@@ -599,6 +604,24 @@ MonoBehaviour:
   - {fileID: 8300000, guid: 5f1b3a0b2f26c3b46baef315e9f365a5, type: 3}
   material: {fileID: 13400000, guid: 719745900a6b51b4690430871af6d090, type: 2}
   pitchVariationRange: 0.3
+  pitch: 1
+--- !u!114 &941016151780864782
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3121150816857653412}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 60a0734ddaa85f343aa66f38785facd9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  clips:
+  - {fileID: 8300000, guid: c1e23c2fac2e5d54caab695e643c9b2c, type: 3}
+  - {fileID: 8300000, guid: 94d98a77cf37d9f459e4865043c42adf, type: 3}
+  material: {fileID: 13400000, guid: 6beea178b43469247b65fcfc4cc08dc6, type: 2}
+  pitchVariationRange: 0.5
   pitch: 1
 --- !u!1 &6550822038047768291
 GameObject:
