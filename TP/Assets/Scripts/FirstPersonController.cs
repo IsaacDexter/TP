@@ -9,7 +9,7 @@ using UnityEngine;
 [RequireComponent(typeof(CharacterController))]
 public class FirstPersonController : MonoBehaviour
 {
-    [SerializeField] private Camera playerCamera;
+    [SerializeField] public Camera playerCamera;
     [SerializeField, Range(0.0f, 20.0f)] private float walkSpeed = 6f;
     [SerializeField, Range(0.0f, 20.0f)] private float jumpPower = 5f;
     [SerializeField, Range(0.0f, 20.0f)] private float gravity = 10f;
