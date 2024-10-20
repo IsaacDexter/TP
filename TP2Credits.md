@@ -65,6 +65,12 @@ Footsteps_Boots_Gritty_Ground_Stones_Leaves_Mono.wav
 Creative Commons 0
 https://freesound.org/s/530384/
 ___
+Rain_Storm.wav by rambler52 -- https://freesound.org/s/332116/ -- License: Attribution 4.0
+___
+Water Drip Loop [mono] by DWOBoyle -- https://freesound.org/s/136692/ -- License: Attribution 4.0
+___
+Walking In Mud by lukiacostello -- https://freesound.org/s/446257/ -- License: Creative Commons 0
+___
 # Models
 ___
 https://www.cgtrader.com/3d-model/pillars-vr-ar-low-poly-3d-model
