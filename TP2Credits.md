@@ -44,12 +44,17 @@ Thunder
 Josh74000MC
 Creative Commons 0
 https://freesound.org/p/26811/
-
+___
 Fire
 [Cyril Laurier](https://freesound.org/people/Cyril%20Laurier/)
 Attribution 4.0
 https://freesound.org/people/Cyril%20Laurier/sounds/17717/
-
+___
+Hiking Boot Footsteps on Stone
+[Fission9](Hiking Boot Footsteps on Stone)
+Creative Commons 0
+https://freesound.org/s/521590/
+___
 # Models
 ___
 https://www.cgtrader.com/3d-model/pillars-vr-ar-low-poly-3d-model
