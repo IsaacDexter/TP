@@ -12,6 +12,9 @@ public class FlushableToilet : MonoBehaviour
     {
         if(other.CompareTag("Player"))
         {
+            //int SceneBuildIndex = gameObject.scene.buildIndex;
+            string currentSceneName = gameObject.scene.name;
+            PlayerPrefs.SetInt(currentSceneName, 1);
             flushSound.Play();
             StartCoroutine(WaitForSound());
         }
