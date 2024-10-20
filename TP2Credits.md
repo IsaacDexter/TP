@@ -33,6 +33,11 @@ ambientCG
 Creative Commons CC0 1.0 Universal License.
 ambientCG.com/a/WoodSiding006
 ___
+Manhole Cover 001
+ambientCG
+Creative Commons CC0 1.0 Universal License.
+ambientCG.com/a/ManholeCover001
+___
 # Sounds:
 ___
 Thunder
