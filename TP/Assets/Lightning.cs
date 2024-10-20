@@ -25,31 +25,41 @@ public class Lightning : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        StartCoroutine(Flash());
+        StartCoroutine(Striking());
     }
 
-    public IEnumerator Flash()
+    public void Strike()
+    {
+        foreach (Light light in m_lights)
+        {
+            light.intensity = m_intensity;
+        }
+
+        int clipIndex = Random.Range(0, m_lightningClips.Count);
+        m_audioSource.clip = m_lightningClips[clipIndex];
+        m_audioSource.Play();
+
+        StartCoroutine(EndStrike());
+    }
+
+    private IEnumerator EndStrike()
+    {
+        yield return new WaitForSeconds(m_duration);
+
+        foreach (Light light in m_lights)
+        {
+            light.intensity = 0.0f;
+        }
+    }
+
+    private IEnumerator Striking()
     {
         float interval = Random.Range(m_minInterval, m_maxInterval);
         while (enabled)
         {
             yield return new WaitForSeconds(interval);
 
-            foreach (Light light in m_lights)
-            {
-                light.intensity = m_intensity;
-            }
-
-            int clipIndex = Random.Range(0, m_lightningClips.Count);
-            m_audioSource.clip = m_lightningClips[clipIndex];
-            m_audioSource.Play();
-
-            yield return new WaitForSeconds(m_duration);
-
-            foreach (Light light in m_lights)
-            {
-                light.intensity = 0.0f;
-            }
+            Strike();
 
             interval = Random.Range(m_minInterval, m_maxInterval);
         }

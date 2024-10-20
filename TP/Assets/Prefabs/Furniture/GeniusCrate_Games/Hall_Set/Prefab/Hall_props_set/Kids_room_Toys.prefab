@@ -5,6 +5,7 @@ PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Modification:
+    serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
     - target: {fileID: -8679921383154817045, guid: 2527a4a53adf1664783b6a1e6d0d8503, type: 3}
@@ -56,4 +57,36 @@ PrefabInstance:
       value: Kids_room_Toys
       objectReference: {fileID: 0}
     m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: -7879126613981679719, guid: 2527a4a53adf1664783b6a1e6d0d8503, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 3261609623645598696}
   m_SourcePrefab: {fileID: 100100000, guid: 2527a4a53adf1664783b6a1e6d0d8503, type: 3}
+--- !u!1 &4752798334211041844 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: -7879126613981679719, guid: 2527a4a53adf1664783b6a1e6d0d8503, type: 3}
+  m_PrefabInstance: {fileID: 6004121769965520301}
+  m_PrefabAsset: {fileID: 0}
+--- !u!65 &3261609623645598696
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4752798334211041844}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 2.2056644, y: 0.99338895, z: 0.53664184}
+  m_Center: {x: 0, y: 0, z: 0}
