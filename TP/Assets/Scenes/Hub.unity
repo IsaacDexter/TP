@@ -509,7 +509,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5602022006779487123, guid: 5242788bda3046145add285c13529875, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 1.17
+      value: 0.5
       objectReference: {fileID: 0}
     - target: {fileID: 5602022006779487123, guid: 5242788bda3046145add285c13529875, type: 3}
       propertyPath: m_LocalPosition.z
@@ -713,6 +713,18 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 3512120793549649435, guid: a2deaee5312b51445a2059e12919c9c1, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: -86.15135
+      objectReference: {fileID: 0}
+    - target: {fileID: 3512120793549649435, guid: a2deaee5312b51445a2059e12919c9c1, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: -12.24192
+      objectReference: {fileID: 0}
+    - target: {fileID: 3512120793549649435, guid: a2deaee5312b51445a2059e12919c9c1, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 12.241913
+      objectReference: {fileID: 0}
     - target: {fileID: 5278426092680902147, guid: a2deaee5312b51445a2059e12919c9c1, type: 3}
       propertyPath: m_LocalPosition.x
       value: -2.1048393
@@ -843,6 +855,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1085379313}
     m_Modifications:
+    - target: {fileID: 3851684801475308880, guid: 20e4c9afebae86244b4ff89f45229c7d, type: 3}
+      propertyPath: CorrespondingScene
+      value: Sewer
+      objectReference: {fileID: 0}
     - target: {fileID: 5278426092680902147, guid: 20e4c9afebae86244b4ff89f45229c7d, type: 3}
       propertyPath: m_LocalScale.x
       value: 0.30000004
@@ -912,6 +928,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1085379313}
     m_Modifications:
+    - target: {fileID: 3851684801475308880, guid: 20e4c9afebae86244b4ff89f45229c7d, type: 3}
+      propertyPath: CorrespondingScene
+      value: Sewer
+      objectReference: {fileID: 0}
     - target: {fileID: 5278426092680902147, guid: 20e4c9afebae86244b4ff89f45229c7d, type: 3}
       propertyPath: m_LocalScale.x
       value: 0.30000004
