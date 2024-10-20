@@ -6,7 +6,7 @@ AnimationClip:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: toilet_lid_toilet_lidAction
+  m_Name: lidAction
   serializedVersion: 7
   m_Legacy: 0
   m_Compressed: 0

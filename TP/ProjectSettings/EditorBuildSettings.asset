@@ -6,21 +6,18 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/Scenes/TP1/FixedGameLevels/SplashStart.unity
-    guid: f6b2977d3d8b9644aaf46b481d6de860
+    path: Assets/Scenes/Intro.unity
+    guid: e37b3323a04128e47b7f29367adf7369
   - enabled: 1
-    path: Assets/Scenes/TP1/FixedGameLevels/Level 1.unity
-    guid: 780f54ca1aec3444e9e335f61cd7a083
+    path: Assets/Scenes/Hub.unity
+    guid: cc8f6a31c0a87f046bfd3f22b341428f
   - enabled: 1
-    path: Assets/Scenes/TP1/FixedGameLevels/Level 2.unity
-    guid: e93177dcb758c8b4b98db192417b9e7d
+    path: Assets/Scenes/CryptLevel.unity
+    guid: a055a837b21bf3548886dbe81d3ccd5d
   - enabled: 1
-    path: Assets/Scenes/TP1/FixedGameLevels/Level 3.unity
-    guid: 5fa88b166f0d9c74fa198900f6d4b64e
+    path: Assets/Scenes/WardrobeLevel.unity
+    guid: 5aa04216cc5324e4c8584a34c3fefcd4
   - enabled: 1
-    path: Assets/Scenes/TP1/FixedGameLevels/Level 4.unity
-    guid: ff763dfb7ba127f4e8e5c723854e14b5
-  - enabled: 1
-    path: Assets/Scenes/TP1/FixedGameLevels/Level 5.unity
-    guid: 3c6de3b06b6b9d540b6c8a13707b9424
+    path: Assets/Scenes/Hub_Flooded.unity
+    guid: 10bde969bd6fed24d92a0932cf9ee2c9
   m_configObjects: {}

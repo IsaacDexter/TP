@@ -40,6 +40,11 @@ Josh74000MC
 Creative Commons 0
 https://freesound.org/p/26811/
 
+Fire
+[Cyril Laurier](https://freesound.org/people/Cyril%20Laurier/)
+Attribution 4.0
+https://freesound.org/people/Cyril%20Laurier/sounds/17717/
+
 # Models
 ___
 https://www.cgtrader.com/3d-model/pillars-vr-ar-low-poly-3d-model
