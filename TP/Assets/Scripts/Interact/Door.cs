@@ -37,7 +37,7 @@ public class Door : InteractableObject
     public void OnTriggerEnter(Collider other)
     {
         //if a player enters the trigger
-        if (other.gameObject.layer == 7)
+        if (other.CompareTag("Player"))
         {
             //Show it that it can interact
             player = other.GetComponentInParent<Player>();
@@ -48,7 +48,7 @@ public class Door : InteractableObject
     public void OnTriggerExit(Collider other)
     {
         //if a player exits the trigger
-        if (other.gameObject.layer == 7)
+        if (other.CompareTag("Player"))
         {
             //Hide its interact message
             player = other.GetComponentInParent<Player>();
