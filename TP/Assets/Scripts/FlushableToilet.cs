@@ -6,14 +6,24 @@ using UnityEngine.SceneManagement;
 public class FlushableToilet : MonoBehaviour
 {
     private string sceneName = "Hub";
-    private AudioSource flushSound;
+    [SerializeField] private AudioSource flushSound;
 
     private void OnTriggerEnter(Collider other)
     {
         if(other.CompareTag("Player"))
         {
             flushSound.Play();
-            SceneManager.LoadScene(sceneName);
+            StartCoroutine(WaitForSound());
         }
+    }
+
+    private IEnumerator WaitForSound()
+    {
+        while (flushSound.isPlaying)
+        {
+            yield return null;
+        }
+
+        SceneManager.LoadScene(sceneName);
     }
 }
