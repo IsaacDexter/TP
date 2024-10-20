@@ -55,6 +55,16 @@ Hiking Boot Footsteps on Stone
 Creative Commons 0
 https://freesound.org/s/521590/
 ___
+Wading_Through_Water.wav
+[ConnorM94](https://freesound.org/people/ConnorM94/)
+Attribution 3.0
+https://freesound.org/s/386884/
+___
+Footsteps_Boots_Gritty_Ground_Stones_Leaves_Mono.wav
+[Nox_Sound](https://freesound.org/people/Nox_Sound/)
+Creative Commons 0
+https://freesound.org/s/530384/
+___
 # Models
 ___
 https://www.cgtrader.com/3d-model/pillars-vr-ar-low-poly-3d-model

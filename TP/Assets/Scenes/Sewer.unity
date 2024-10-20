@@ -97,7 +97,7 @@ LightmapSettings:
     m_ExportTrainingData: 0
     m_TrainingDataDestination: TrainingData
     m_LightProbeSampleCountMultiplier: 4
-  m_LightingDataAsset: {fileID: 0}
+  m_LightingDataAsset: {fileID: 112000000, guid: a3802509d9b83bb4e89b34ced9c386c3, type: 2}
   m_LightingSettings: {fileID: 0}
 --- !u!196 &4
 NavMeshSettings:
@@ -959,21 +959,25 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1068086654411238671, guid: 5242788bda3046145add285c13529875, type: 3}
+      propertyPath: m_footsteps.Array.size
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 3121150816857653412, guid: 5242788bda3046145add285c13529875, type: 3}
       propertyPath: m_Name
       value: Player
       objectReference: {fileID: 0}
     - target: {fileID: 5602022006779487123, guid: 5242788bda3046145add285c13529875, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -2.1028767
+      value: -1.3388532
       objectReference: {fileID: 0}
     - target: {fileID: 5602022006779487123, guid: 5242788bda3046145add285c13529875, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.12500006
+      value: 0.29166675
       objectReference: {fileID: 0}
     - target: {fileID: 5602022006779487123, guid: 5242788bda3046145add285c13529875, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -0.14055938
+      value: 0.49278712
       objectReference: {fileID: 0}
     - target: {fileID: 5602022006779487123, guid: 5242788bda3046145add285c13529875, type: 3}
       propertyPath: m_LocalRotation.w
@@ -2242,7 +2246,7 @@ MeshCollider:
   serializedVersion: 5
   m_Convex: 0
   m_CookingOptions: 30
-  m_Mesh: {fileID: 1971547409}
+  m_Mesh: {fileID: 714435827}
 --- !u!33 &1757442894
 MeshFilter:
   m_ObjectHideFlags: 10

@@ -33,7 +33,9 @@ public class Footsteps : MonoBehaviour
     void Update()
     {
         if (m_characterController.velocity.sqrMagnitude > 0.0f)
-        m_timeSince += Time.deltaTime;
+        {
+            m_timeSince += Time.deltaTime;
+        }
         if(m_timeSince > m_frequency)
         {
             Step();
@@ -69,7 +71,8 @@ public class Footsteps : MonoBehaviour
         PhysicMaterial sharedMaterial = hit.collider.sharedMaterial;
         if (sharedMaterial == null)
         {
-            return false;
+            m_footstep = m_footsteps.First();
+            return true;
         }
  
         if (sharedMaterial.Equals(m_footstep.material))
