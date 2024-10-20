@@ -835,6 +835,22 @@ PrefabInstance:
       propertyPath: m_Name
       value: WardrobeLevel
       objectReference: {fileID: 0}
+    - target: {fileID: 1917442500132056205, guid: 8b573bad4987c0743a93b656e6aadc52, type: 3}
+      propertyPath: m_Size.x
+      value: 4.600235
+      objectReference: {fileID: 0}
+    - target: {fileID: 1917442500132056205, guid: 8b573bad4987c0743a93b656e6aadc52, type: 3}
+      propertyPath: m_Size.z
+      value: 3.6014068
+      objectReference: {fileID: 0}
+    - target: {fileID: 1917442500132056205, guid: 8b573bad4987c0743a93b656e6aadc52, type: 3}
+      propertyPath: m_Center.x
+      value: 1.8001175
+      objectReference: {fileID: 0}
+    - target: {fileID: 1917442500132056205, guid: 8b573bad4987c0743a93b656e6aadc52, type: 3}
+      propertyPath: m_Center.z
+      value: 0.91939247
+      objectReference: {fileID: 0}
     - target: {fileID: 5276528054554190029, guid: 8b573bad4987c0743a93b656e6aadc52, type: 3}
       propertyPath: m_LocalRotation.w
       value: 0.50000113
