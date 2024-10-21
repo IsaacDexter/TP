@@ -46,6 +46,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_messenger: {fileID: 1338034105112562679}
+  m_timer: {fileID: 0}
   m_blackImage: {fileID: 7300982520503385134}
   m_fadeDuration: 0.2
 --- !u!1 &6456222140868451925

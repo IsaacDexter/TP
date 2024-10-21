@@ -9,6 +9,7 @@ public class FlushableToilet : MonoBehaviour
     [SerializeField] private float TargetPosX = -1f, TargetPosY, TargetPosZ;
 
     [SerializeField] private AudioSource flushSound;
+    [SerializeField] private GameObject barrier;
 
     private void OnTriggerEnter(Collider other)
     {
@@ -26,6 +27,8 @@ public class FlushableToilet : MonoBehaviour
 
             flushSound.Play();
             StartCoroutine(WaitForSound());
+            barrier.SetActive(true);
+            GetComponent<Collider>().enabled = false;
         }
     }
 
