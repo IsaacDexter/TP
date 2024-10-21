@@ -34,7 +34,7 @@ public class FirstPersonController : MonoBehaviour
         characterController = GetComponent<CharacterController>();
         Cursor.lockState = CursorLockMode.Locked;
         Cursor.visible = false;
-        footsteps = GetComponent<Footsteps>();
+        footsteps = GetComponentInChildren<Footsteps>();
     }
 
     // Update is called once per frame
@@ -50,8 +50,8 @@ public class FirstPersonController : MonoBehaviour
 
         if (Input.GetButton("Jump") && canMove && characterController.isGrounded)
         {
-            footsteps.Step();
             moveDirection.y = jumpPower;
+            footsteps.Step();
         }
         else
         {

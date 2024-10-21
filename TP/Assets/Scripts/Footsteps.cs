@@ -15,16 +15,15 @@ public class Footsteps : MonoBehaviour
     private float m_timeSince = 0.0f;
 
     [SerializeField] private AudioSource m_audioSource = null;
+    [SerializeField] private CharacterController m_characterController = null;
 
     private Footstep m_footstep;
 
-    private CharacterController m_characterController = null;
 
 
     // Start is called before the first frame update
     void Start()
     {
-        m_characterController = GetComponent<CharacterController>();
         m_footsteps = GetComponents<Footstep>();
         m_footstep = m_footsteps.First();
     }
