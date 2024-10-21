@@ -431,7 +431,7 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: 4a03ce269531e6749a392101142dfa03, type: 3}
   m_PlayOnAwake: 1
-  m_Volume: 0.359
+  m_Volume: 0.2
   m_Pitch: 1
   Loop: 1
   Mute: 0
@@ -439,8 +439,8 @@ AudioSource:
   SpatializePostEffects: 0
   Priority: 128
   DopplerLevel: 1
-  MinDistance: 1
-  MaxDistance: 500
+  MinDistance: 0.5
+  MaxDistance: 750
   Pan2D: 0
   rolloffMode: 0
   BypassEffects: 0
@@ -697,6 +697,7 @@ MonoBehaviour:
   BrazierLit:
   - {fileID: 1857305938673309754}
   - {fileID: 290272506316215837}
+  CorrespondingScene: 
 --- !u!1 &7907625792028264907
 GameObject:
   m_ObjectHideFlags: 0
