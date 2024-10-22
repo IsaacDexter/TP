@@ -11,6 +11,7 @@ public class ToiletMonster : MonoBehaviour
     void Start()
     {
         animator = GetComponent<Animator>();
+        audioSource = GetComponentInChildren<AudioSource>();
     }
 
     // Update is called once per frame
@@ -18,20 +19,24 @@ public class ToiletMonster : MonoBehaviour
     {
     }
 
-    public void PlayClip(AudioClip clip)
+    public void PlayClip(AudioClip clip, bool small = false)
     {
-        audioSource.clip = clip;
-        audioSource.Play();
-        StartCoroutine(WaitForSound(audioSource));
-    }
+        audioSource.PlayOneShot(clip);
+        if (small)
+        {
+            animator.SetTrigger("StartLidMovementSmall");
 
-    private IEnumerator WaitForSound(AudioSource source)
-    {
-        while (source.isPlaying)
+        }
+        else
         {
             animator.SetTrigger("StartLidMovement");
-            yield return null;
         }
+        StartCoroutine(StopAnimationAfterSound(clip));
+    }
+
+    private IEnumerator StopAnimationAfterSound(AudioClip clip)
+    {
+        yield return new WaitForSeconds(clip.length);
         animator.SetTrigger("StopLidMovement");
     }
 }
