@@ -481,9 +481,9 @@ GameObject:
   - component: {fileID: 5278426092680902147}
   - component: {fileID: 3737421862603957076}
   - component: {fileID: 1273646003363714054}
-  - component: {fileID: 2268921378040864455}
   - component: {fileID: 7829665017498005243}
   - component: {fileID: 1408860254363029339}
+  - component: {fileID: 3934198058039486126}
   m_Layer: 6
   m_Name: PF_Flushable_Toilet
   m_TagString: Untagged
@@ -551,27 +551,6 @@ MonoBehaviour:
   TargetPosZ: 0
   flushSound: {fileID: 7829665017498005243}
   barrier: {fileID: 4596749475391435420}
---- !u!65 &2268921378040864455
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6540541561697886801}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 1
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Size: {x: 1.9380763, y: 1.4474763, z: 1.5174923}
-  m_Center: {x: 0.11734748, y: 0.22373645, z: -0.03200531}
 --- !u!82 &7829665017498005243
 AudioSource:
   m_ObjectHideFlags: 0
@@ -680,6 +659,27 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1e9a1e375a7cbba4e9833c341b5054d8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!135 &3934198058039486126
+SphereCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6540541561697886801}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 1
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Radius: 0.68300766
+  m_Center: {x: 0.16, y: 0.45, z: 0.02}
 --- !u!1 &7907625792028264907
 GameObject:
   m_ObjectHideFlags: 0

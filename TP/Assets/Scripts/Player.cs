@@ -41,9 +41,12 @@ public class Player : MonoBehaviour
     void Update()
     {
         int toiletRolls = PlayerPrefs.GetInt("ToiletRoll");
-        canThrow = toiletRolls >= 3;
 
-        if (toiletRolls <= 0)
+        if(toiletRolls >= 3)
+        {
+            canThrow = true;
+        }
+        else if (toiletRolls <= 0)
         {
             canThrow = false;
             ui.ClearMessage(throwMessage);
