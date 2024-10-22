@@ -13,12 +13,17 @@ public class PlayerUIManager : MonoBehaviour
     [SerializeField] private TextMeshProUGUI m_messenger;
     [SerializeField] private TextMeshProUGUI m_timer;
     [SerializeField] private FadableImage m_blackImage;
+    [SerializeField] private TextMeshProUGUI m_tpCount;
     [SerializeField, Range(0.0f, 20.0f)] private float m_fadeDuration;
 
     // Start is called before the first frame update
     void Start()
     {
         m_blackImage.FadeOut(m_fadeDuration);
+    }
+    private void Update()
+    {
+        m_tpCount.text = PlayerPrefs.GetInt("ToiletRoll").ToString() + "/3";
     }
     public void DisplayMessage(string message)
     {
