@@ -813,6 +813,30 @@ PrefabInstance:
       propertyPath: m_AnchorMax.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2448551456293567976, guid: ccd3866cef3876c489b7e0a479ffc2fa, type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 50
+      objectReference: {fileID: 0}
+    - target: {fileID: 2448551456293567976, guid: ccd3866cef3876c489b7e0a479ffc2fa, type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 50
+      objectReference: {fileID: 0}
+    - target: {fileID: 2448551456293567976, guid: ccd3866cef3876c489b7e0a479ffc2fa, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 175.2
+      objectReference: {fileID: 0}
+    - target: {fileID: 2875249016713459853, guid: ccd3866cef3876c489b7e0a479ffc2fa, type: 3}
+      propertyPath: orthographic
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2875249016713459853, guid: ccd3866cef3876c489b7e0a479ffc2fa, type: 3}
+      propertyPath: field of view
+      value: 41
+      objectReference: {fileID: 0}
+    - target: {fileID: 2875249016713459853, guid: ccd3866cef3876c489b7e0a479ffc2fa, type: 3}
+      propertyPath: orthographic size
+      value: 0.08
+      objectReference: {fileID: 0}
     - target: {fileID: 4545483009233073532, guid: ccd3866cef3876c489b7e0a479ffc2fa, type: 3}
       propertyPath: m_AnchorMax.x
       value: 0
@@ -824,6 +848,10 @@ PrefabInstance:
     - target: {fileID: 4545483009233073532, guid: ccd3866cef3876c489b7e0a479ffc2fa, type: 3}
       propertyPath: m_SizeDelta.x
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4833638135903243316, guid: ccd3866cef3876c489b7e0a479ffc2fa, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -0.43
       objectReference: {fileID: 0}
     - target: {fileID: 5962166262416305690, guid: ccd3866cef3876c489b7e0a479ffc2fa, type: 3}
       propertyPath: m_Name
@@ -840,6 +868,10 @@ PrefabInstance:
     - target: {fileID: 6243672902124752162, guid: ccd3866cef3876c489b7e0a479ffc2fa, type: 3}
       propertyPath: m_SizeDelta.x
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8145157342490349428, guid: ccd3866cef3876c489b7e0a479ffc2fa, type: 3}
+      propertyPath: m_Name
+      value: TPCount
       objectReference: {fileID: 0}
     - target: {fileID: 9069819563905529289, guid: ccd3866cef3876c489b7e0a479ffc2fa, type: 3}
       propertyPath: m_LocalPosition.x
