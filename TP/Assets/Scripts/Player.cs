@@ -12,6 +12,7 @@ public class Player : MonoBehaviour
     public FirstPersonController controller;
     public PlayerLineManager lines;
 
+    private string throwMessage = "LMB to Throw TP!";
     private bool canThrow = false;
     [SerializeField] private GameObject TPThrowablePrefab;
     private Transform interactTransform;
@@ -39,42 +40,38 @@ public class Player : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        int ToiletRolls = PlayerPrefs.GetInt("ToiletRoll");
+        int toiletRolls = PlayerPrefs.GetInt("ToiletRoll");
+        canThrow = toiletRolls >= 3;
 
-        if(ToiletRolls >= 3)
-        {
-            canThrow = true;
-
-            if (Physics.Raycast(transform.position, transform.forward, out var hit, Mathf.Infinity))
-            {
-                var obj = hit.collider.gameObject;
-
-                if(obj.layer == 9 && canThrow)
-                {
-                    ui.DisplayMessage("Throw!");
-                }
-                else
-                {
-                    ui.ClearMessage("Throw!");
-                }
-            }
-        }
-
-        if(canThrow && Input.GetMouseButtonUp(0)) //left click
-        {
-            ThrowTP();
-        }
-
-        if (ToiletRolls <= 0)
+        if (toiletRolls <= 0)
         {
             canThrow = false;
+            ui.ClearMessage(throwMessage);
+        }
+
+        if (canThrow && Physics.Raycast(transform.position, transform.forward, out var hit, Mathf.Infinity))
+        {
+            var obj = hit.collider.gameObject;
+
+            if (obj.layer == 9)
+            {
+                ui.DisplayMessage(throwMessage);
+                if (Input.GetMouseButtonUp(0))
+                {
+                    ThrowTP();
+                }
+            }
+            else
+            {
+                ui.ClearMessage(throwMessage);
+            }
         }
     }
 
     private void ThrowTP()
     {
         GameObject TP = Instantiate(TPThrowablePrefab, interactTransform.position, interactTransform.rotation);
-        TP.GetComponent<Rigidbody>().AddForce(controller.playerCamera.transform.forward * 1500);
+        TP.GetComponent<Rigidbody>().AddForce(controller.playerCamera.transform.forward * 400 + new Vector3(0.0f, 200.0f, 0.0f));
         PlayerPrefs.SetInt("ToiletRoll", PlayerPrefs.GetInt("ToiletRoll") - 1);
     }
 }
