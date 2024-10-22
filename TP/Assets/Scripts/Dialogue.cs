@@ -11,9 +11,14 @@ public class Dialogue : MonoBehaviour
     {
         if (other.CompareTag("Player"))
         {
-            StartCoroutine(PlayLinesSequentially());
+            Play();
             GetComponent<Collider>().enabled = false;
         }
+    }
+
+    virtual public void Play()
+    {
+        StartCoroutine(PlayLinesSequentially());
     }
 
     private IEnumerator PlayLinesSequentially()
@@ -21,7 +26,7 @@ public class Dialogue : MonoBehaviour
         foreach (DialogueLine line in lines)
         {
             line.Play();
-            yield return new WaitForSeconds(line.clip.length + interval);
+            yield return new WaitForSeconds(line.GetLength() + interval);
         }
     }
 }
