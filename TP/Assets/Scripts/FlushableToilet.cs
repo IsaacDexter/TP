@@ -34,10 +34,7 @@ public class FlushableToilet : MonoBehaviour
 
     private IEnumerator WaitForSound()
     {
-        while (flushSound.isPlaying)
-        {
-            yield return null;
-        }
+        yield return new WaitForSeconds(flushSound.clip.length);
 
         SceneManager.LoadScene(sceneName);
     }
