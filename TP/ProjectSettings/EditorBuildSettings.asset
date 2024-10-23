@@ -18,6 +18,9 @@ EditorBuildSettings:
     path: Assets/Scenes/WardrobeLevel.unity
     guid: 5aa04216cc5324e4c8584a34c3fefcd4
   - enabled: 1
+    path: Assets/Scenes/Sewer.unity
+    guid: 1a09f36c7168d4643aa73184bc4ab079
+  - enabled: 1
     path: Assets/Scenes/Hub_Flooded.unity
     guid: 10bde969bd6fed24d92a0932cf9ee2c9
   m_configObjects: {}
