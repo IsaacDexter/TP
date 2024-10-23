@@ -597,6 +597,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: Player
       objectReference: {fileID: 0}
+    - target: {fileID: 5111126154129854049, guid: 5242788bda3046145add285c13529875, type: 3}
+      propertyPath: throwPromptClip
+      value: 
+      objectReference: {fileID: 8300000, guid: 76e8407902b197f418e17ea65264c7b3, type: 3}
+    - target: {fileID: 5111126154129854049, guid: 5242788bda3046145add285c13529875, type: 3}
+      propertyPath: throwPromptSource
+      value: 
+      objectReference: {fileID: 2101247106}
     - target: {fileID: 5602022006779487123, guid: 5242788bda3046145add285c13529875, type: 3}
       propertyPath: m_LocalPosition.x
       value: -8.5
@@ -777,63 +785,6 @@ PrefabInstance:
       insertIndex: -1
       addedObject: {fileID: 1391357359}
   m_SourcePrefab: {fileID: 100100000, guid: 6a3c797f7cc641048b1c0a3d9fe566dd, type: 3}
---- !u!1001 &864955772
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    serializedVersion: 3
-    m_TransformParent: {fileID: 0}
-    m_Modifications:
-    - target: {fileID: 2399528004191833781, guid: ecdda5dff2a2ba44788b03afb732ec29, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: -5.363254
-      objectReference: {fileID: 0}
-    - target: {fileID: 2399528004191833781, guid: ecdda5dff2a2ba44788b03afb732ec29, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 0.19999981
-      objectReference: {fileID: 0}
-    - target: {fileID: 2399528004191833781, guid: ecdda5dff2a2ba44788b03afb732ec29, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 10.180006
-      objectReference: {fileID: 0}
-    - target: {fileID: 2399528004191833781, guid: ecdda5dff2a2ba44788b03afb732ec29, type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 2399528004191833781, guid: ecdda5dff2a2ba44788b03afb732ec29, type: 3}
-      propertyPath: m_LocalRotation.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2399528004191833781, guid: ecdda5dff2a2ba44788b03afb732ec29, type: 3}
-      propertyPath: m_LocalRotation.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2399528004191833781, guid: ecdda5dff2a2ba44788b03afb732ec29, type: 3}
-      propertyPath: m_LocalRotation.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2399528004191833781, guid: ecdda5dff2a2ba44788b03afb732ec29, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2399528004191833781, guid: ecdda5dff2a2ba44788b03afb732ec29, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2399528004191833781, guid: ecdda5dff2a2ba44788b03afb732ec29, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3065134320495266488, guid: ecdda5dff2a2ba44788b03afb732ec29, type: 3}
-      propertyPath: m_Name
-      value: ToiletRollCollectible (2)
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-    m_RemovedGameObjects: []
-    m_AddedGameObjects: []
-    m_AddedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: ecdda5dff2a2ba44788b03afb732ec29, type: 3}
 --- !u!1001 &946973375
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1568,63 +1519,6 @@ MonoBehaviour:
   speaker: {fileID: 1357248322}
   clip: {fileID: 8300000, guid: 75fb3ac736b3a7b4c9a7355c8acf809e, type: 3}
   force: 0
---- !u!1001 &1530411011
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    serializedVersion: 3
-    m_TransformParent: {fileID: 0}
-    m_Modifications:
-    - target: {fileID: 2399528004191833781, guid: ecdda5dff2a2ba44788b03afb732ec29, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: -4.790105
-      objectReference: {fileID: 0}
-    - target: {fileID: 2399528004191833781, guid: ecdda5dff2a2ba44788b03afb732ec29, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 0.20000005
-      objectReference: {fileID: 0}
-    - target: {fileID: 2399528004191833781, guid: ecdda5dff2a2ba44788b03afb732ec29, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 10.282804
-      objectReference: {fileID: 0}
-    - target: {fileID: 2399528004191833781, guid: ecdda5dff2a2ba44788b03afb732ec29, type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 2399528004191833781, guid: ecdda5dff2a2ba44788b03afb732ec29, type: 3}
-      propertyPath: m_LocalRotation.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2399528004191833781, guid: ecdda5dff2a2ba44788b03afb732ec29, type: 3}
-      propertyPath: m_LocalRotation.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2399528004191833781, guid: ecdda5dff2a2ba44788b03afb732ec29, type: 3}
-      propertyPath: m_LocalRotation.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2399528004191833781, guid: ecdda5dff2a2ba44788b03afb732ec29, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2399528004191833781, guid: ecdda5dff2a2ba44788b03afb732ec29, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2399528004191833781, guid: ecdda5dff2a2ba44788b03afb732ec29, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3065134320495266488, guid: ecdda5dff2a2ba44788b03afb732ec29, type: 3}
-      propertyPath: m_Name
-      value: ToiletRollCollectible (1)
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-    m_RemovedGameObjects: []
-    m_AddedGameObjects: []
-    m_AddedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: ecdda5dff2a2ba44788b03afb732ec29, type: 3}
 --- !u!1001 &1589652201
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1822,63 +1716,6 @@ PrefabInstance:
       insertIndex: -1
       addedObject: {fileID: 1528405358}
   m_SourcePrefab: {fileID: 100100000, guid: 6a3c797f7cc641048b1c0a3d9fe566dd, type: 3}
---- !u!1001 &1814558186
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    serializedVersion: 3
-    m_TransformParent: {fileID: 0}
-    m_Modifications:
-    - target: {fileID: 2399528004191833781, guid: ecdda5dff2a2ba44788b03afb732ec29, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: -5.265526
-      objectReference: {fileID: 0}
-    - target: {fileID: 2399528004191833781, guid: ecdda5dff2a2ba44788b03afb732ec29, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 0.19999981
-      objectReference: {fileID: 0}
-    - target: {fileID: 2399528004191833781, guid: ecdda5dff2a2ba44788b03afb732ec29, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 9.740188
-      objectReference: {fileID: 0}
-    - target: {fileID: 2399528004191833781, guid: ecdda5dff2a2ba44788b03afb732ec29, type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 2399528004191833781, guid: ecdda5dff2a2ba44788b03afb732ec29, type: 3}
-      propertyPath: m_LocalRotation.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2399528004191833781, guid: ecdda5dff2a2ba44788b03afb732ec29, type: 3}
-      propertyPath: m_LocalRotation.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2399528004191833781, guid: ecdda5dff2a2ba44788b03afb732ec29, type: 3}
-      propertyPath: m_LocalRotation.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2399528004191833781, guid: ecdda5dff2a2ba44788b03afb732ec29, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2399528004191833781, guid: ecdda5dff2a2ba44788b03afb732ec29, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2399528004191833781, guid: ecdda5dff2a2ba44788b03afb732ec29, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3065134320495266488, guid: ecdda5dff2a2ba44788b03afb732ec29, type: 3}
-      propertyPath: m_Name
-      value: ToiletRollCollectible
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-    m_RemovedGameObjects: []
-    m_AddedGameObjects: []
-    m_AddedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: ecdda5dff2a2ba44788b03afb732ec29, type: 3}
 --- !u!1001 &1855378663
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2199,6 +2036,11 @@ MonoBehaviour:
   speaker: {fileID: 1357248322}
   clip: {fileID: 8300000, guid: 4c00d21346aa11245a44e7138bb086e1, type: 3}
   force: 0
+--- !u!82 &2101247106 stripped
+AudioSource:
+  m_CorrespondingSourceObject: {fileID: 8483846825193621018, guid: 5242788bda3046145add285c13529875, type: 3}
+  m_PrefabInstance: {fileID: 651429251}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &5278426092152924731 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 5278426092680902147, guid: 20e4c9afebae86244b4ff89f45229c7d, type: 3}
@@ -2250,9 +2092,6 @@ SceneRoots:
   - {fileID: 1085379313}
   - {fileID: 1509411901}
   - {fileID: 601700598}
-  - {fileID: 1814558186}
-  - {fileID: 1530411011}
-  - {fileID: 864955772}
   - {fileID: 946973375}
   - {fileID: 1662953218}
   - {fileID: 956776675}

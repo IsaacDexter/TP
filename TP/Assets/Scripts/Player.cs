@@ -16,6 +16,9 @@ public class Player : MonoBehaviour
     private bool canThrow = false;
     [SerializeField] private GameObject TPThrowablePrefab;
     private Transform interactTransform;
+    [SerializeField] private AudioClip throwPromptClip;
+    [SerializeField] private AudioSource throwPromptSource;
+    private bool bHasPrompted = false;
 
     /// <summary>Scare the player, increasing the poop stat and updating the HUD</summary>
     public void Scare()
@@ -60,6 +63,11 @@ public class Player : MonoBehaviour
             if (obj.layer == 9)
             {
                 ui.DisplayMessage(throwMessage);
+                if (!bHasPrompted)
+                {
+                    throwPromptSource.PlayOneShot(throwPromptClip);
+                    bHasPrompted = true;
+                }
                 if (Input.GetMouseButtonUp(0))
                 {
                     ThrowTP();
