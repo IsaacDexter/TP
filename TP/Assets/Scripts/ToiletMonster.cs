@@ -19,7 +19,7 @@ public class ToiletMonster : MonoBehaviour
     void Update()
     {
         int ClogProgress = PlayerPrefs.GetInt("Thrown");
-        if (ClogProgress > 3)
+        if (ClogProgress >= 3)
         {
             //Start going crazy
 
