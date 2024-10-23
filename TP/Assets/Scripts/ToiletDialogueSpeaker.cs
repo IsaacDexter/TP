@@ -5,6 +5,7 @@ using UnityEngine;
 public class ToiletDialogueSpeaker : DialogueSpeaker
 {
     [SerializeField] private ToiletMonster toiletMonster;
+    [SerializeField] private bool isFlushable = true;
 
     override public void Play(AudioClip clip, bool force = false)
     {
@@ -14,7 +15,7 @@ public class ToiletDialogueSpeaker : DialogueSpeaker
         }
         if (!source.isPlaying)
         {
-            toiletMonster.PlayClip(clip, true);
+            toiletMonster.PlayClip(clip, isFlushable);
         }
     }
 }

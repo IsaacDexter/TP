@@ -8,7 +8,7 @@ public class HubDialogue : Dialogue
 
     override public void Play()
     {
-        if (PlayerPrefs.GetInt(CorrespondingScene) == 1)
+        if (PlayerPrefs.GetString("lastScene") == CorrespondingScene)
         {
             base.Play();
         }

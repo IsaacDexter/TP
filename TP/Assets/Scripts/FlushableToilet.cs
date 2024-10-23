@@ -17,7 +17,7 @@ public class FlushableToilet : MonoBehaviour
         {
             string currentSceneName = gameObject.scene.name;
             PlayerPrefs.SetInt(currentSceneName, 1);
-
+            PlayerPrefs.SetString("lastScene", currentSceneName);
             if(TargetPosX != -1f)
             {
                 PlayerPrefs.SetFloat("pos_x", TargetPosX);
