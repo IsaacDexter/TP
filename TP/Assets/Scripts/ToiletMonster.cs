@@ -7,6 +7,7 @@ public class ToiletMonster : MonoBehaviour
     private Animator animator;
     private AudioSource audioSource;
     [SerializeField] private Door ExitDoor;
+    [SerializeField] private Dialogue deathDialogue = null;
 
     // Start is called before the first frame update
     void Start()
@@ -22,9 +23,8 @@ public class ToiletMonster : MonoBehaviour
         if (ClogProgress >= 3)
         {
             //Start going crazy
-
             //player: oh shit i better leave!!
-
+            deathDialogue.Play();
 
             PlayerPrefs.DeleteKey("Thrown");
             //unlock exit door
