@@ -76,5 +76,14 @@ public class Player : MonoBehaviour
         GameObject TP = Instantiate(TPThrowablePrefab, interactTransform.position, interactTransform.rotation);
         TP.GetComponent<Rigidbody>().AddForce(controller.playerCamera.transform.forward * 400 + new Vector3(0.0f, 200.0f, 0.0f));
         PlayerPrefs.SetInt("ToiletRoll", PlayerPrefs.GetInt("ToiletRoll") - 1);
+        
+        if(PlayerPrefs.HasKey("Thrown"))
+        {
+            PlayerPrefs.SetInt("Thrown", PlayerPrefs.GetInt("Thrown") + 1);
+        }
+        else
+        {
+            PlayerPrefs.SetInt("Thrown", 1);
+        }
     }
 }

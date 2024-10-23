@@ -6,6 +6,7 @@ public class ToiletMonster : MonoBehaviour
 {
     private Animator animator;
     private AudioSource audioSource;
+    [SerializeField] private Door ExitDoor;
 
     // Start is called before the first frame update
     void Start()
@@ -17,6 +18,18 @@ public class ToiletMonster : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        int ClogProgress = PlayerPrefs.GetInt("Thrown");
+        if (ClogProgress > 3)
+        {
+            //Start going crazy
+
+            //player: oh shit i better leave!!
+
+
+            PlayerPrefs.DeleteKey("Thrown");
+            //unlock exit door
+            ExitDoor.locked = false;
+        }
     }
 
     public void PlayClip(AudioClip clip, bool small = false)
