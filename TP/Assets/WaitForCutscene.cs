@@ -11,7 +11,6 @@ public class WaitForCutscene : MonoBehaviour
     void Start()
     {
         StartCoroutine(WaitForCutsceneEnd());
-        Application.Quit();
     }
 
     // Update is called once per frame
@@ -22,9 +21,7 @@ public class WaitForCutscene : MonoBehaviour
 
     private IEnumerator WaitForCutsceneEnd()
     {
-        while (director.state == PlayState.Playing)
-        {
-            yield return null;
-        }
+        yield return new WaitForSeconds(50.0f);
+        Application.Quit();
     }
 }
