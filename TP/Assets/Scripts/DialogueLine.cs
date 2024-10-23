@@ -12,6 +12,11 @@ public class DialogueLine : MonoBehaviour
         speaker.Play(clip, force);
     }
 
+    public void Stop()
+    {
+        speaker.Stop();
+    }
+
     public float GetLength()
     {
         return clip.length;

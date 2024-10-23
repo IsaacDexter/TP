@@ -65,6 +65,11 @@ public class Player : MonoBehaviour
                 ui.DisplayMessage(throwMessage);
                 if (!bHasPrompted)
                 {
+                    Dialogue[] allDialogues = FindObjectsOfType<Dialogue>() as Dialogue[];
+                    foreach (Dialogue anyDialogue in allDialogues)
+                    {
+                        anyDialogue.Stop();
+                    }
                     throwPromptSource.PlayOneShot(throwPromptClip);
                     bHasPrompted = true;
                 }

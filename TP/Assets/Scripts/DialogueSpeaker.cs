@@ -21,4 +21,9 @@ public class DialogueSpeaker : MonoBehaviour
             source.PlayOneShot(clip);
         }
     }
+
+    public void Stop()
+    {
+        source.Stop();
+    }
 }

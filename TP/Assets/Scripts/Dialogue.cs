@@ -21,6 +21,15 @@ public class Dialogue : MonoBehaviour
         StartCoroutine(PlayLinesSequentially());
     }
 
+    public void Stop()
+    {
+        StopCoroutine(PlayLinesSequentially());
+        foreach (DialogueLine line in lines)
+        {
+            line.Stop();
+        }
+    }
+
     private IEnumerator PlayLinesSequentially()
     {
         foreach (DialogueLine line in lines)
